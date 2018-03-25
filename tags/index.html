@@ -3,19 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档 | Djack&#39;s Blog</title>
+    <title>hexo | Djack&#39;s Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="description" content="随笔">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Djack&#39;s Blog">
-<meta property="og:url" content="http://djack.top/archives/index.html">
+<meta property="og:title" content="hexo">
+<meta property="og:url" content="http://djack.top/tags/index.html">
 <meta property="og:site_name" content="Djack&#39;s Blog">
 <meta property="og:description" content="随笔">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-19T03:42:16.256Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Djack&#39;s Blog">
+<meta name="twitter:title" content="hexo">
 <meta name="twitter:description" content="随笔">
     
 
@@ -139,167 +140,97 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>归档
+    <em class="page-title-link" data-url="/tags/index.html">hexo</em>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="page-" class="article article-single article-type-page" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/03/19/game/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://djack.top/2018/03/19/game/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/game/">game</a>
-            </div>
-            <div class="date"><time datetime="2018-03-19T03:55:02.000Z" itemprop="datePublished">2018-03-19</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/03/19/game/">王者荣耀游戏分享</a>
+        hexo
         </h1>
     
 
-        <p class="article-excerpt">
+            </header>
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
             
-        </p>
+            
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://djack.top/tags/index.html" data-id="cjf67msem0007zgnrlqy4auem" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/03/16/hello-world/" class="thumbnail">
-    
-    
-        <span style="background-image:url(css/images/personal-logo.png)" alt="欢迎访问我的博客" class="thumbnail-image"></span>
-    
-    
-        
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/blog/">blog</a>
-            </div>
-            <div class="date"><time datetime="2018-03-16T07:39:00.000Z" itemprop="datePublished">2018-03-16</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/03/16/hello-world/">欢迎访问我的博客</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            欢迎访问我的第一篇博客，本博客使用 Hexo 搭建!  如果大家感兴趣，访问更多信息请查看文档documentation。
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More info: Server
-Generate static files1
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/03/16/other-blog/" class="thumbnail">
-    
-    
-        <span style="background-image:url(css/images/WechatIMG29.jpeg)" alt="hexo搭建记录" class="thumbnail-image"></span>
-    
-    
-        
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/hexo/">hexo</a>
-            </div>
-            <div class="date"><time datetime="2018-03-16T07:39:00.000Z" itemprop="datePublished">2018-03-16</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/03/16/other-blog/">hexo搭建记录</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            搭建博客引用的文章
-Hexo备忘录2–主题theme
-hexo从零开始到搭建完整
-Hexo + Github搭建自己的博客
-HEXO建站-基本设置
-在 Hueman 主题添加侧边栏添加微信公众号二维码
-
-
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    </div></section>
-
 
 
                         </div>
@@ -490,6 +421,8 @@ HEXO建站-基本设置
     <script>
     var disqus_shortname = 'hexo-theme-hueman';
     
+    
+    var disqus_url = 'http://djack.top/tags/index.html';
     
     (function() {
     var dsq = document.createElement('script');
