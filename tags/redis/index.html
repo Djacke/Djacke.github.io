@@ -3,20 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>java | Djack&#39;s Blog</title>
+    <title>标签：: redis | Djack&#39;s Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="description" content="随笔">
 <meta property="og:type" content="website">
-<meta property="og:title" content="java">
-<meta property="og:url" content="http://djack.top/java/index.html">
+<meta property="og:title" content="Djack&#39;s Blog">
+<meta property="og:url" content="http://djack.top/tags/redis/index.html">
 <meta property="og:site_name" content="Djack&#39;s Blog">
 <meta property="og:description" content="随笔">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-27T10:36:28.391Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java">
+<meta name="twitter:title" content="Djack&#39;s Blog">
 <meta name="twitter:description" content="随笔">
     
 
@@ -140,97 +139,126 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="/java/index.html">java</em>
+    <i class="icon fa fa-tag"></i>标签：: <em>redis</em>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="page-" class="article article-single article-type-page" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2018/03/28/docker-redis-sentinel/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/redis-sentinel.png)" alt="redis-sentinel-docker" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://djack.top/2018/03/28/docker-redis-sentinel/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/devops/">devops</a>
+            </div>
+            <div class="date"><time datetime="2018-03-28T03:33:14.000Z" itemprop="datePublished">2018-03-28</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        java
+        <a href="/2018/03/28/docker-redis-sentinel/">redis-sentinel-docker</a>
         </h1>
     
 
-            </header>
-        
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            
-        </div>
-        <footer class="article-footer">
-            
-
-
-
-    <a data-url="http://djack.top/java/index.html" data-id="cjf9j0p190007mrnrn7cd536j" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+        <p class="article-excerpt">
+            本骗简单介绍redis sentinel在docker环境下的快速搭建。
+开源代码拉取从github仓库拉取源码 GitHub
+修改docker-compose.yml按照 GithubGist 修改docker-compose.yml文件
+注意：本篇介绍的是在开发者个人电脑上安装docker-compose后搭建的redis sentinel环境，验证也是在宿主机上进行，所以compose中的I
+        </p>
     </div>
 </article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2018/03/28/spring-schedule-redis-lock/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/redis-redis.jpg)" alt="spring-schedule-redis-lock" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://djack.top/2018/03/28/spring-schedule-redis-lock/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/devops/">devops</a>
+            </div>
+            <div class="date"><time datetime="2018-03-28T03:30:25.000Z" itemprop="datePublished">2018-03-28</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/03/28/spring-schedule-redis-lock/">spring-schedule-redis-lock</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            在使用spring cloud开发微服务的过程中遇到了定时任务重复执行的问题，这个问题大家应该经常遇到，下面分享一下自己在项目中的解决方法。
+项目配置
+spring boot 2.0.0.RELEASE
+springcloud Finchley.M8
+gradle config redis1234dependencies &#123;	compile &apos;org.springframewo
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+
+    </div></section>
+
 
 
                         </div>
@@ -272,10 +300,50 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/03/28/docker-redis-sentinel/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/redis-sentinel.png)" alt="redis-sentinel-docker" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
+                            <p class="item-title"><a href="/2018/03/28/docker-redis-sentinel/" class="title">redis-sentinel-docker</a></p>
+                            <p class="item-date"><time datetime="2018-03-28T03:33:14.000Z" itemprop="datePublished">2018-03-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/28/spring-schedule-redis-lock/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/redis-redis.jpg)" alt="spring-schedule-redis-lock" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
+                            <p class="item-title"><a href="/2018/03/28/spring-schedule-redis-lock/" class="title">spring-schedule-redis-lock</a></p>
+                            <p class="item-date"><time datetime="2018-03-28T03:30:25.000Z" itemprop="datePublished">2018-03-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/03/27/gradle-spotbus-configuration/" class="thumbnail">
     
     
-        <span style="background-image:url(css/images/spotbugs-logo.png)" alt="gradle spotbus configuration" class="thumbnail-image"></span>
+        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/spotbugs-logo.png)" alt="gradle spotbus configuration" class="thumbnail-image"></span>
     
     
 </a>
@@ -295,7 +363,7 @@
                             <a href="/2018/03/19/game-wangzherongyao/" class="thumbnail">
     
     
-        <span style="background-image:url(css/images/wangzherongyao.jpg)" alt="王者荣耀游戏分享" class="thumbnail-image"></span>
+        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/wangzherongyao.jpg)" alt="王者荣耀游戏分享" class="thumbnail-image"></span>
     
     
 </a>
@@ -315,7 +383,7 @@
                             <a href="/2018/03/16/first-hexo-blog/" class="thumbnail">
     
     
-        <span style="background-image:url(css/images/personal-logo.png)" alt="欢迎访问我的博客" class="thumbnail-image"></span>
+        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/logo-header.png)" alt="欢迎访问我的博客" class="thumbnail-image"></span>
     
     
 </a>
@@ -329,26 +397,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/03/16/hexo-create-chapter1/" class="thumbnail">
-    
-    
-        <span style="background-image:url(css/images/hexo-logo.jpeg)" alt="hexo搭建记录" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/hexo/">hexo</a></p>
-                            <p class="item-title"><a href="/2018/03/16/hexo-create-chapter1/" class="title">hexo搭建记录</a></p>
-                            <p class="item-date"><time datetime="2018-03-16T07:39:00.000Z" itemprop="datePublished">2018-03-16</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -358,7 +406,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/devops/">devops</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/devops/">devops</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -368,7 +416,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -378,7 +426,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spotbus/">spotbus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/王者荣耀/">王者荣耀</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/">redis</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spotbus/">spotbus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/王者荣耀/">王者荣耀</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -388,7 +436,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/spotbus/" style="font-size: 10px;">spotbus</a> <a href="/tags/王者荣耀/" style="font-size: 10px;">王者荣耀</a>
+            <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/redis/" style="font-size: 20px;">redis</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/spotbus/" style="font-size: 10px;">spotbus</a> <a href="/tags/王者荣耀/" style="font-size: 10px;">王者荣耀</a>
         </div>
     </div>
 
@@ -441,8 +489,6 @@
     <script>
     var disqus_shortname = 'hexo-theme-hueman';
     
-    
-    var disqus_url = 'http://djack.top/java/index.html';
     
     (function() {
     var dsq = document.createElement('script');

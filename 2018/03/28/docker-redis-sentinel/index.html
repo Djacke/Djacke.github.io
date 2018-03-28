@@ -3,20 +3,26 @@
 <head>
     <meta charset="utf-8">
     
-    <title>分类：: blog | Djack&#39;s Blog</title>
+    <title>redis-sentinel-docker | Djack&#39;s Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="随笔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Djack&#39;s Blog">
-<meta property="og:url" content="http://djack.top/categories/blog/index.html">
+        <meta name="keywords" content="redis" />
+    
+    <meta name="description" content="本骗简单介绍redis sentinel在docker环境下的快速搭建。 开源代码拉取从github仓库拉取源码 GitHub 修改docker-compose.yml按照 GithubGist 修改docker-compose.yml文件 注意：本篇介绍的是在开发者个人电脑上安装docker-compose后搭建的redis sentinel环境，验证也是在宿主机上进行，所以compose中的I">
+<meta name="keywords" content="redis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis-sentinel-docker">
+<meta property="og:url" content="http://djack.top/2018/03/28/docker-redis-sentinel/index.html">
 <meta property="og:site_name" content="Djack&#39;s Blog">
-<meta property="og:description" content="随笔">
+<meta property="og:description" content="本骗简单介绍redis sentinel在docker环境下的快速搭建。 开源代码拉取从github仓库拉取源码 GitHub 修改docker-compose.yml按照 GithubGist 修改docker-compose.yml文件 注意：本篇介绍的是在开发者个人电脑上安装docker-compose后搭建的redis sentinel环境，验证也是在宿主机上进行，所以compose中的I">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://p6adyfyu5.bkt.clouddn.com/redis-sentinel.png">
+<meta property="og:updated_time" content="2018-03-28T08:02:10.611Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Djack&#39;s Blog">
-<meta name="twitter:description" content="随笔">
+<meta name="twitter:title" content="redis-sentinel-docker">
+<meta name="twitter:description" content="本骗简单介绍redis sentinel在docker环境下的快速搭建。 开源代码拉取从github仓库拉取源码 GitHub 修改docker-compose.yml按照 GithubGist 修改docker-compose.yml文件 注意：本篇介绍的是在开发者个人电脑上安装docker-compose后搭建的redis sentinel环境，验证也是在宿主机上进行，所以compose中的I">
+<meta name="twitter:image" content="http://p6adyfyu5.bkt.clouddn.com/redis-sentinel.png">
     
 
     
@@ -139,72 +145,134 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>分类：: <em class="page-title-link">blog</em>
+    <a class="page-title-link" href="/categories/devops/">devops</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-docker-redis-sentinel" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/03/16/first-hexo-blog/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/logo-header.png)" alt="欢迎访问我的博客" class="thumbnail-image"></span>
-    
-    
-        
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/blog/">blog</a>
-            </div>
-            <div class="date"><time datetime="2018-03-16T07:39:00.000Z" itemprop="datePublished">2018-03-16</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/03/16/first-hexo-blog/">欢迎访问我的博客</a>
+        redis-sentinel-docker
         </h1>
     
 
-        <p class="article-excerpt">
-            欢迎访问我的第一篇博客，本博客使用 Hexo 搭建!  如果大家感兴趣，访问更多信息请查看文档documentation。
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More info: Server
-Generate static files1
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/03/28/docker-redis-sentinel/" class="article-date">
+            <time datetime="2018-03-28T03:33:14.000Z" itemprop="datePublished">2018-03-28</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/redis/">redis</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p>本骗简单介绍redis sentinel在docker环境下的快速搭建。</p>
+<h4 id="开源代码拉取"><a href="#开源代码拉取" class="headerlink" title="开源代码拉取"></a>开源代码拉取</h4><p>从github仓库拉取源码 <a href="https://github.com/s7anley/redis-sentinel-docker" target="_blank" rel="noopener">GitHub</a></p>
+<h4 id="修改docker-compose-yml"><a href="#修改docker-compose-yml" class="headerlink" title="修改docker-compose.yml"></a>修改docker-compose.yml</h4><p>按照 <a href="https://gist.github.com/Djacke/0a26054c3eda084dc0ddecd602055af0" target="_blank" rel="noopener">GithubGist</a> 修改docker-compose.yml文件</p>
+<p>注意：<em>本篇介绍的是在开发者个人电脑上安装docker-compose后搭建的redis sentinel环境，验证也是在宿主机上进行，所以compose中的IP地址应该为宿主机的内网IP地址，否则测试代码会拋connect time out异常。</em></p>
+<h4 id="执行docker命令"><a href="#执行docker命令" class="headerlink" title="执行docker命令"></a>执行docker命令</h4><ul>
+<li>启动三个节点的哨兵集群</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d --scale sentinel=3</span><br></pre></td></tr></table></figure>
+<ul>
+<li>验证是否可以成功获取master地址和端口</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec redissentineldocker_sentinel_1 redis-cli -p 26379 sentinel get-master-addr-by-name mymaster</span><br></pre></td></tr></table></figure>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://djack.top/2018/03/28/docker-redis-sentinel/" data-id="cjfat1b9p0000zlnrlik0q1we" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
 
                         </div>
@@ -233,6 +301,19 @@ Generate static files1
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/03/28/spring-schedule-redis-lock/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">spring-schedule-redis-lock</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -436,11 +517,13 @@ Generate static files1
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://djack.top/2018/03/28/docker-redis-sentinel/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
