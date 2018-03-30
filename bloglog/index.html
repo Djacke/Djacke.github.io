@@ -21,7 +21,7 @@
     
 
     
-        <link rel="alternate" href="/" title="Djack&#39;s Blog" type="application/atom+xml" />
+        <link rel="alternate" href="/atom.xml" title="Djack&#39;s Blog" type="application/atom+xml" />
     
 
     
@@ -44,6 +44,7 @@
     
 
 
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </head>
 
 <body>
@@ -81,6 +82,10 @@
                             
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/bloglog">搭建日志</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/booklist">书单</a>
                                 </li>
                             
                                 <li class="main-nav-list-item" >
@@ -164,7 +169,7 @@
 
 
 
-    <a data-url="http://djack.top/bloglog/index.html" data-id="cjfat700j000326nr1cxxlktp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://djack.top/bloglog/index.html" data-id="cjfdtc86u0003aznrka5y45is" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -227,18 +232,24 @@
         </footer>
     </div>
 </article>
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNTMzMy8xMTg2OQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
-    <section id="comments">
-    
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
+       if (typeof LivereTower === 'function') { return; }
 
-    
-    </section>
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
 
-
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
                         </div>
                     </section>
                     <aside id="sidebar">
@@ -257,7 +268,7 @@
             
                 
                 <li>
-                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
                 </li>
@@ -457,7 +468,8 @@
                     <a href="/" class="logo"></a>
                 </h1>
                 <p>&copy; 2018 Djack Chen</p>
-                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/hueman" target="_blank">Hueman</a></p>
+                <span id="busuanzi_container_site_pv">total visit <span id="busuanzi_value_site_pv"></span> times</span>
             </div>
         </div>
     </div>
