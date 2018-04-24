@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://djack.top/"/>
-  <updated>2018-04-02T09:20:51.013Z</updated>
+  <updated>2018-04-24T11:25:46.341Z</updated>
   <id>http://djack.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>spring boot 2.0 build executable jar</title>
+    <link href="http://djack.top/2018/04/24/spring-boot-2-jar/"/>
+    <id>http://djack.top/2018/04/24/spring-boot-2-jar/</id>
+    <published>2018-04-24T11:06:24.000Z</published>
+    <updated>2018-04-24T11:25:46.341Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Before-Upgrade"><a href="#Before-Upgrade" class="headerlink" title="Before Upgrade"></a>Before Upgrade</h3><ul><li>spring boot version</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ext &#123;</span><br><span class="line">springBootVersion = &apos;1.5.6.RELEASE&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>plugin</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: &apos;org.springframework.boot&apos;</span><br></pre></td></tr></table></figure><ul><li>jar </li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">jar &#123;</span><br><span class="line">baseName = &apos;xxx-yyy&apos;</span><br><span class="line">version = &apos;1.0.2&apos;</span><br><span class="line"></span><br><span class="line">manifest &#123;</span><br><span class="line">attributes &apos;Implementation-Title&apos;: baseName,</span><br><span class="line">&apos;Implementation-Version&apos;: version,</span><br><span class="line">&apos;Built-By&apos;: System.getProperty(&apos;user.name&apos;),</span><br><span class="line">&apos;Built-Date&apos;: new Date(),</span><br><span class="line">&apos;Built-JDK&apos;: System.getProperty(&apos;java.version&apos;)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>bootRepackage</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bootRepackage &#123;</span><br><span class="line">enabled = false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="After-Upgrade"><a href="#After-Upgrade" class="headerlink" title="After Upgrade"></a>After Upgrade</h3><ul><li>spring boot version</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ext &#123;</span><br><span class="line">springBootVersion = &apos;2.0.1.RELEASE&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>plugin</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: &apos;org.springframework.boot&apos;</span><br><span class="line">apply plugin: &quot;io.spring.dependency-management&quot;</span><br></pre></td></tr></table></figure><ul><li><p><code>jar</code>keep the same</p></li><li><p>relpace <code>bootRepackage</code></p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bootJar.enabled = false</span><br><span class="line">jar.enabled = true</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Before-Upgrade&quot;&gt;&lt;a href=&quot;#Before-Upgrade&quot; class=&quot;headerlink&quot; title=&quot;Before Upgrade&quot;&gt;&lt;/a&gt;Before Upgrade&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;spring boot vers
+      
+    
+    </summary>
+    
+      <category term="spring boot" scheme="http://djack.top/categories/spring-boot/"/>
+    
+    
+      <category term="spring boot" scheme="http://djack.top/tags/spring-boot/"/>
+    
+  </entry>
   
   <entry>
     <title>idea中安装使用lombok</title>
