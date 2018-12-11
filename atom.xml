@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://djack.top/"/>
-  <updated>2018-10-22T10:05:46.907Z</updated>
+  <updated>2018-12-11T10:01:20.819Z</updated>
   <id>http://djack.top/</id>
   
   <author>
@@ -15,6 +15,128 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring boot spotbus(Ⅱ)</title>
+    <link href="http://djack.top/2018/12/11/spring-boot-spotbus(%E2%85%A1)/"/>
+    <id>http://djack.top/2018/12/11/spring-boot-spotbus(Ⅱ)/</id>
+    <published>2018-12-11T07:09:18.000Z</published>
+    <updated>2018-12-11T10:01:20.819Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>SpotBugs</code>是<code>FindBugs</code>的继任者，用来寻找Java代码中bug的静态分析工具，<a href="http://spotbugs-in-kengo-toda.readthedocs.io/en/latest/" target="_blank" rel="noopener">Read the Docs</a></p><h3 id="gradle配置"><a href="#gradle配置" class="headerlink" title="gradle配置"></a>gradle配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">plugins &#123;</span><br><span class="line">    id &quot;com.github.spotbugs&quot; version &quot;1.6.1&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">tasks.withType(com.github.spotbugs.SpotBugsTask) &#123;</span><br><span class="line">    reports &#123;</span><br><span class="line">        xml.enabled false</span><br><span class="line">        html.enabled true</span><br><span class="line">    &#125;</span><br><span class="line">    excludeFilter file(&apos;gradle/spotbugs-exclude.xml&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="spotbugs-exclude-xml"><a href="#spotbugs-exclude-xml" class="headerlink" title="spotbugs-exclude.xml"></a>spotbugs-exclude.xml</h3><ul><li><a href="http://spotbugs-in-kengo-toda.readthedocs.io/en/latest/filter.html#types-of-match-clauses" target="_blank" rel="noopener">Types of Match clauses</a></li><li><a href="http://spotbugs-in-kengo-toda.readthedocs.io/en/latest/bugDescriptions.html" target="_blank" rel="noopener">Bug descriptions</a></li><li>inner classes configuration use <a href="https://stackoverflow.com/questions/1073656/problems-with-findbugs-exclude-filter" target="_blank" rel="noopener"><strong>$</strong></a></li></ul><p><strong>example</strong></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">FindBugsFilter</span></span></span><br><span class="line"><span class="tag">              <span class="attr">xmlns</span>=<span class="string">"https://github.com/spotbugs/filter/3.0.0"</span></span></span><br><span class="line"><span class="tag">              <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">              <span class="attr">xsi:schemaLocation</span>=<span class="string">"https://github.com/spotbugs/filter/3.0.0 https://raw.githubusercontent.com/spotbugs/spotbugs/3.1.0_RC6/spotbugs/etc/findbugsfilter.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Match</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Class</span> <span class="attr">name</span>=<span class="string">"cn.foo.service.Client$UpdaterDTO"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Bug</span> <span class="attr">code</span>=<span class="string">"EI2"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Match</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Match</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Bug</span> <span class="attr">code</span>=<span class="string">"NP,MS,UwF"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Match</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">FindBugsFilter</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;code&gt;SpotBugs&lt;/code&gt;是&lt;code&gt;FindBugs&lt;/code&gt;的继任者，用来寻找Java代码中bug的静态分析工具，&lt;a href=&quot;http://spotbugs-in-kengo-toda.readthedocs.io/en/latest/&quot; t
+      
+    
+    </summary>
+    
+      <category term="devops" scheme="http://djack.top/categories/devops/"/>
+    
+    
+      <category term="spring boot" scheme="http://djack.top/tags/spring-boot/"/>
+    
+      <category term="集成测试" scheme="http://djack.top/tags/%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="gradle" scheme="http://djack.top/tags/gradle/"/>
+    
+      <category term="spotbus" scheme="http://djack.top/tags/spotbus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring boot cache with redis(Ⅴ)</title>
+    <link href="http://djack.top/2018/12/11/spring-boot-cache-redis(%E2%85%A4)/"/>
+    <id>http://djack.top/2018/12/11/spring-boot-cache-redis(Ⅴ)/</id>
+    <published>2018-12-11T07:09:18.000Z</published>
+    <updated>2018-12-11T09:40:56.422Z</updated>
+    
+    <content type="html"><![CDATA[<p>本篇简单介绍 <code>Spring boot</code> <code>cache</code> <code>redis</code> 开发，以及简单的集成测试，详细代码 <a href="https://github.com/Djacke/spring-boot-mmr-starter" target="_blank" rel="noopener">Djack@github.com</a></p><ul><li><p>gradle </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">compile(</span><br><span class="line">      &apos;org.springframework.data:spring-data-redis&apos;,</span><br><span class="line">      &apos;redis.clients:jedis&apos;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">testCompile(</span><br><span class="line">      &apos;com.github.kstyrc:embedded-redis:0.6&apos;</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li><li><p>mock redis connection</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@Profile</span>(<span class="string">"integTest"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisConfig</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> RedisServer redisServer;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Value</span>(<span class="string">"localhost"</span>)</span><br><span class="line">  <span class="keyword">private</span> String redisHost;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Value</span>(<span class="string">"$&#123;random.int[58000,60000]&#125;"</span>)</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> redisPort;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Bean</span></span><br><span class="line">  <span class="meta">@Primary</span></span><br><span class="line">  <span class="function">JedisConnectionFactory <span class="title">jedisConnectionFactory</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    JedisConnectionFactory factory = <span class="keyword">new</span> JedisConnectionFactory(</span><br><span class="line">        <span class="keyword">new</span> RedisStandaloneConfiguration(redisHost, redisPort)</span><br><span class="line">    );</span><br><span class="line">    <span class="keyword">return</span> factory;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@PostConstruct</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startRedis</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    redisServer = <span class="keyword">new</span> RedisServer(redisPort);</span><br><span class="line">    redisServer.start();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@PreDestroy</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stopRedis</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    redisServer.stop();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>cache configuration</p><p>定义自己的cachemanage 和cache 名称，还有redis存储序列化的相关配置</p></li><li><p>cache service </p><p>增加缓存的操作方法，注意使用如下注解<code>@Cacheable</code> <code>@CachePut</code> <code>@CacheEvict</code></p></li><li><p>启用缓存</p><p>启动类增加注解 <code>@EnableCaching</code></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本篇简单介绍 &lt;code&gt;Spring boot&lt;/code&gt; &lt;code&gt;cache&lt;/code&gt; &lt;code&gt;redis&lt;/code&gt; 开发，以及简单的集成测试，详细代码 &lt;a href=&quot;https://github.com/Djacke/spring-boot-mm
+      
+    
+    </summary>
+    
+      <category term="devops" scheme="http://djack.top/categories/devops/"/>
+    
+    
+      <category term="redis" scheme="http://djack.top/tags/redis/"/>
+    
+      <category term="spring boot" scheme="http://djack.top/tags/spring-boot/"/>
+    
+      <category term="cache" scheme="http://djack.top/tags/cache/"/>
+    
+      <category term="集成测试" scheme="http://djack.top/tags/%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring boot mongodb(Ⅰ)</title>
+    <link href="http://djack.top/2018/12/11/spring-boot-mongodb(%E2%85%A0)/"/>
+    <id>http://djack.top/2018/12/11/spring-boot-mongodb(Ⅰ)/</id>
+    <published>2018-12-11T07:09:18.000Z</published>
+    <updated>2018-12-11T10:04:26.244Z</updated>
+    
+    <content type="html"><![CDATA[<p>已经在公司内开发了一段时间<code>spring boot</code> <code>mongodb</code> 相关的项目了，抽点时间记录下上手过程。详细代码 <a href="https://github.com/Djacke/spring-boot-mmr-starter" target="_blank" rel="noopener">戳这里</a></p><p><em>Note</em> </p><blockquote><p>spring boot + mongodb开发项目极其简单，效率较高，数据持久化层代码很少，查询效率也很高。一般的查询几乎不用自己写实现，<br>支持语义方法，比如：findPersonByNameLike(String name) 类似于 select * from person where name like ‘%{name}%’,<br>同时开源的测试库也很好用 如：de.flapdoodle.embed.mongo</p></blockquote><h4 id="gradle"><a href="#gradle" class="headerlink" title="gradle"></a>gradle</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">compile(&apos;org.springframework.boot:spring-boot-starter-data-mongodb&apos;)</span><br><span class="line"></span><br><span class="line">testCompile(&apos;de.flapdoodle.embed:de.flapdoodle.embed.mongo&apos;)</span><br></pre></td></tr></table></figure><h4 id="entity"><a href="#entity" class="headerlink" title="entity"></a>entity</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@Document(collection = &quot;contact&quot;)</span><br><span class="line">@Getter</span><br><span class="line">@Builder(toBuilder = true)</span><br><span class="line">@NoArgsConstructor</span><br><span class="line">@AllArgsConstructor</span><br><span class="line">@ToString</span><br><span class="line">public class ContactPerson &#123;</span><br><span class="line"></span><br><span class="line">  @JsonFormat(shape = JsonFormat.Shape.STRING)</span><br><span class="line">  private Long id;</span><br><span class="line"></span><br><span class="line">  private String contactPerson;</span><br><span class="line"></span><br><span class="line">  private String contactPhone;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="Mongo-Respository"><a href="#Mongo-Respository" class="headerlink" title="Mongo Respository"></a>Mongo Respository</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@RepositoryRestResource(collectionResourceRel = &quot;contact&quot;, path = &quot;contact&quot;, exported = true)</span><br><span class="line">public interface ContactPersonRepository extends MongoRepository&lt;ContactPerson, Long&gt; &#123;</span><br><span class="line"></span><br><span class="line">  public ContactPerson save(ContactPerson contactPerson);</span><br><span class="line"></span><br><span class="line">  public List&lt;ContactPerson&gt; findByContactPersonLike(@Param(&quot;contactPerson&quot;) String contactPerson);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="controller"><a href="#controller" class="headerlink" title="controller"></a>controller</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@PostMapping(&quot;/mongo&quot;)</span><br><span class="line">public ResponseEntity&lt;?&gt; saveContactPerson(@RequestBody ContactPerson contactPerson) &#123;</span><br><span class="line">  return ResponseEntity.ok(contactPersonRepository.save(contactPerson));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@GetMapping(&quot;/mongo/&#123;name&#125;&quot;)</span><br><span class="line">public ResponseEntity&lt;?&gt; getContactPerson(@PathVariable String name) &#123;</span><br><span class="line">  return ResponseEntity.ok(contactPersonRepository.findByContactPersonLike(name));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="controller-test"><a href="#controller-test" class="headerlink" title="controller test"></a>controller test</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void testFindConstactPersonByName() throws Exception &#123;</span><br><span class="line">  ContactPerson contactPerson =</span><br><span class="line">      ContactPerson.builder()</span><br><span class="line">          .id(100L)</span><br><span class="line">          .contactPerson(&quot;ceshi1&quot;)</span><br><span class="line">          .contactPhone(&quot;13500110022&quot;)</span><br><span class="line">          .address(&quot;北京市朝阳区&quot;)</span><br><span class="line">          .remark(&quot;ceshi&quot;)</span><br><span class="line">          .build();</span><br><span class="line">  mongoTemplate.insert(contactPerson);</span><br><span class="line">  mockMvc</span><br><span class="line">      .perform(get(&quot;/v1/api/mmr/mongo/&#123;name&#125;&quot;, &quot;ceshi&quot;))</span><br><span class="line">      .andExpect(status().isOk())</span><br><span class="line">      .andExpect(jsonPath(&quot;$&quot;, hasSize(1)))</span><br><span class="line">      .andExpect(jsonPath(&quot;$.[0].contactPerson&quot;).value(&quot;ceshi1&quot;));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;已经在公司内开发了一段时间&lt;code&gt;spring boot&lt;/code&gt; &lt;code&gt;mongodb&lt;/code&gt; 相关的项目了，抽点时间记录下上手过程。详细代码 &lt;a href=&quot;https://github.com/Djacke/spring-boot-mmr-sta
+      
+    
+    </summary>
+    
+      <category term="devops" scheme="http://djack.top/categories/devops/"/>
+    
+    
+      <category term="spring boot" scheme="http://djack.top/tags/spring-boot/"/>
+    
+      <category term="集成测试" scheme="http://djack.top/tags/%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="gradle" scheme="http://djack.top/tags/gradle/"/>
+    
+      <category term="mongodb" scheme="http://djack.top/tags/mongodb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring boot rabbitmq(Ⅳ)</title>
+    <link href="http://djack.top/2018/12/11/spring-boot-rabbitmq(%E2%85%A3)/"/>
+    <id>http://djack.top/2018/12/11/spring-boot-rabbitmq(Ⅳ)/</id>
+    <published>2018-12-11T07:09:18.000Z</published>
+    <updated>2018-12-11T10:19:47.170Z</updated>
+    
+    <content type="html"><![CDATA[<p>本篇简单介绍 <code>Spring boot</code> <code>rabbitmq</code> 开发，以及简单的集成测试，详细代码 <a href="https://github.com/Djacke/spring-boot-mmr-starter" target="_blank" rel="noopener">Djack@github.com</a></p><ul><li><p>gradle </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">compile(&apos;org.springframework.boot:spring-boot-starter-amqp&apos;)</span><br><span class="line"></span><br><span class="line">testCompile(&apos;org.apache.qpid:qpid-broker:6.1.2&apos;)</span><br></pre></td></tr></table></figure></li><li><p>config</p><ul><li style="list-style: none"><input type="checkbox" checked> 测试目录下模拟启动amqp</li><li style="list-style: none"><input type="checkbox" checked> 申明mq的exchange 和 queue</li></ul></li><li><p>rabbit mq listener</p><p>监听队列，接收消息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@RabbitListener(queues = AmqpConfig.RECEIPT_VOUCHER_QUEUE)</span><br><span class="line">public void receive(String message) throws IOException &#123;</span><br><span class="line">  System.out.println(&quot;接受消息内容:&quot; + message);</span><br><span class="line">  messageDatas.add(objectMapper.readValue(message, ContactPerson.class));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>integration test<br>发送消息到测试队列，并检查消费是否成功</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本篇简单介绍 &lt;code&gt;Spring boot&lt;/code&gt; &lt;code&gt;rabbitmq&lt;/code&gt; 开发，以及简单的集成测试，详细代码 &lt;a href=&quot;https://github.com/Djacke/spring-boot-mmr-starter&quot; targe
+      
+    
+    </summary>
+    
+      <category term="devops" scheme="http://djack.top/categories/devops/"/>
+    
+    
+      <category term="spring boot" scheme="http://djack.top/tags/spring-boot/"/>
+    
+      <category term="集成测试" scheme="http://djack.top/tags/%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="rabbitmq" scheme="http://djack.top/tags/rabbitmq/"/>
+    
+  </entry>
   
   <entry>
     <title>spring boot 2.0 build executable jar</title>
@@ -124,61 +246,35 @@
   </entry>
   
   <entry>
-    <title>spring boot + gradle + mybatis + mysql + H2</title>
-    <link href="http://djack.top/2018/03/27/springboot-mybatis-gradle-mysql-h2/"/>
-    <id>http://djack.top/2018/03/27/springboot-mybatis-gradle-mysql-h2/</id>
+    <title>Spring boot mybatis&amp;H2(Ⅲ)</title>
+    <link href="http://djack.top/2018/03/27/spring-boot-mybatis&amp;h2(%E2%85%A2)/"/>
+    <id>http://djack.top/2018/03/27/spring-boot-mybatis&amp;h2(Ⅲ)/</id>
     <published>2018-03-27T07:09:18.000Z</published>
-    <updated>2018-11-02T01:31:51.620Z</updated>
+    <updated>2018-12-11T09:40:12.983Z</updated>
     
-    <content type="html"><![CDATA[<p>本篇记录最近公司开发的新CRM系统，架构采用spring boot + gradle + mybatis + mysql，测试数据库用H2，但是发现H2对mysql的函数支持的不是很好，所以单元测试有一定局限性。</p><h3 id="build-gradle"><a href="#build-gradle" class="headerlink" title="build.gradle"></a>build.gradle</h3><p>省略了Springboot 项目的通用配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&apos;mysql:mysql-connector-java&apos;,</span><br><span class="line">&apos;org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2&apos;,</span><br><span class="line">&apos;tk.mybatis:mapper-spring-boot-starter:1.2.4&apos;,</span><br><span class="line">//分页</span><br><span class="line">&apos;com.github.pagehelper:pagehelper-spring-boot-starter:1.2.3&apos;,</span><br><span class="line">&apos;org.springframework.cloud:spring-cloud-starter-openfeign&apos;,</span><br><span class="line">//枚举处理</span><br><span class="line">&apos;org.mybatis:mybatis-typehandlers-jsr310:1.0.2&apos;,</span><br></pre></td></tr></table></figure></p><h3 id="bootstrap-yml"><a href="#bootstrap-yml" class="headerlink" title="bootstrap.yml"></a>bootstrap.yml</h3><ul><li><p>MYSQL</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  profiles: development #开发环境</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">    username: username</span><br><span class="line">    password: password</span><br><span class="line">    url: jdbc:mysql://localhost:3306/testdb</span><br></pre></td></tr></table></figure></li><li><p>H2</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  profiles: integTest #测试环境</span><br><span class="line">  h2:</span><br><span class="line">    console:</span><br><span class="line">      enabled: true</span><br><span class="line">      path: /h2</span><br><span class="line">  datasource:</span><br><span class="line">    url: jdbc:h2:mem:testdb;MODE=MYSQL;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false</span><br><span class="line">    driver-class-name: org.h2.Driver</span><br><span class="line">    username: sa</span><br><span class="line">    password: sa</span><br><span class="line">    schema: classpath:db/*.sql   #测试用的建表语句</span><br><span class="line">    #schema-username: sa </span><br><span class="line">    #schema-password: sa</span><br><span class="line">    #data-username: sa</span><br><span class="line">    #data-password: sa</span><br><span class="line">    #initialization-mode: always</span><br><span class="line">    #platform: h2</span><br><span class="line">//分页配置</span><br><span class="line">pagehelper:</span><br><span class="line">  helperDialect: h2</span><br><span class="line">  reasonable: true</span><br><span class="line">  supportMethodsArguments: true</span><br><span class="line">  params: count=countSql</span><br></pre></td></tr></table></figure></li><li><p>MYBATIS</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapperLocations: classpath:mapper/*.xml</span><br><span class="line">  typeHandlersPackage: cn.pilipa.customer.management.handler #特殊处理handler</span><br><span class="line">  configuration:</span><br><span class="line">    mapUnderscoreToCamelCase: true</span><br></pre></td></tr></table></figure><p>java 代码采用通用的开发模式，即controller 调用service，service负责处理复杂的业务逻辑，调用持久层api，持久层api采用mapper接口的方式，xml中可以添加适当复杂的sql查询</p>]]></content>
+    <content type="html"><![CDATA[<p>本篇记录最近公司开发的新CRM系统，架构采用<code>spring boot</code> <code>gradle</code> <code>mysql</code>，测试数据库用<code>H2</code>，但是发现H2对mysql的函数支持的不是很好，所以单元测试有一定局限性。详细代码 <a href="https://github.com/Djacke/spring-boot-mmr-starter" target="_blank" rel="noopener">我是链接</a></p><h3 id="build-gradle"><a href="#build-gradle" class="headerlink" title="build.gradle"></a>build.gradle</h3><p>省略了Springboot 项目的通用配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&apos;mysql:mysql-connector-java&apos;,</span><br><span class="line">&apos;org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2&apos;,</span><br><span class="line">&apos;tk.mybatis:mapper-spring-boot-starter:1.2.4&apos;,</span><br><span class="line">//分页</span><br><span class="line">&apos;com.github.pagehelper:pagehelper-spring-boot-starter:1.2.3&apos;,</span><br><span class="line">&apos;org.springframework.cloud:spring-cloud-starter-openfeign&apos;,</span><br><span class="line">//枚举处理</span><br><span class="line">&apos;org.mybatis:mybatis-typehandlers-jsr310:1.0.2&apos;,</span><br></pre></td></tr></table></figure></p><h3 id="bootstrap-yml"><a href="#bootstrap-yml" class="headerlink" title="bootstrap.yml"></a>bootstrap.yml</h3><ul><li><p>MYSQL</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  profiles: development #开发环境</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">    username: username</span><br><span class="line">    password: password</span><br><span class="line">    url: jdbc:mysql://localhost:3306/testdb</span><br></pre></td></tr></table></figure></li><li><p>H2</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  profiles: integTest #测试环境</span><br><span class="line">  h2:</span><br><span class="line">    console:</span><br><span class="line">      enabled: true</span><br><span class="line">      path: /h2</span><br><span class="line">  datasource:</span><br><span class="line">    url: jdbc:h2:mem:testdb;MODE=MYSQL;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false</span><br><span class="line">    driver-class-name: org.h2.Driver</span><br><span class="line">    username: sa</span><br><span class="line">    password: sa</span><br><span class="line">    schema: classpath:db/*.sql   #测试用的建表语句</span><br><span class="line">    #schema-username: sa </span><br><span class="line">    #schema-password: sa</span><br><span class="line">    #data-username: sa</span><br><span class="line">    #data-password: sa</span><br><span class="line">    #initialization-mode: always</span><br><span class="line">    #platform: h2</span><br><span class="line">//分页配置</span><br><span class="line">pagehelper:</span><br><span class="line">  helperDialect: h2</span><br><span class="line">  reasonable: true</span><br><span class="line">  supportMethodsArguments: true</span><br><span class="line">  params: count=countSql</span><br></pre></td></tr></table></figure></li><li><p>MYBATIS</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapperLocations: classpath:mapper/*.xml</span><br><span class="line">  typeHandlersPackage: cn.pilipa.customer.management.handler #特殊处理handler</span><br><span class="line">  configuration:</span><br><span class="line">    mapUnderscoreToCamelCase: true</span><br></pre></td></tr></table></figure><p>java 代码采用通用的开发模式，即controller 调用service，service负责处理复杂的业务逻辑，调用持久层api，持久层api采用mapper接口的方式，xml中可以添加适当复杂的sql查询</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;本篇记录最近公司开发的新CRM系统，架构采用spring boot + gradle + mybatis + mysql，测试数据库用H2，但是发现H2对mysql的函数支持的不是很好，所以单元测试有一定局限性。&lt;/p&gt;
-&lt;h3 id=&quot;build-gradle&quot;&gt;&lt;a h
+        &lt;p&gt;本篇记录最近公司开发的新CRM系统，架构采用&lt;code&gt;spring boot&lt;/code&gt; &lt;code&gt;gradle&lt;/code&gt; &lt;code&gt;mysql&lt;/code&gt;，测试数据库用&lt;code&gt;H2&lt;/code&gt;，但是发现H2对mysql的函数支持的不是很好，所以单元测试
       
     
     </summary>
     
       <category term="devops" scheme="http://djack.top/categories/devops/"/>
     
+    
+      <category term="spring boot" scheme="http://djack.top/tags/spring-boot/"/>
+    
+      <category term="集成测试" scheme="http://djack.top/tags/%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95/"/>
     
       <category term="gradle" scheme="http://djack.top/tags/gradle/"/>
     
       <category term="mysql" scheme="http://djack.top/tags/mysql/"/>
     
       <category term="H2" scheme="http://djack.top/tags/H2/"/>
-    
-      <category term="Spring boot" scheme="http://djack.top/tags/Spring-boot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>gradle spotbus configuration</title>
-    <link href="http://djack.top/2018/03/27/gradle-spotbus-configuration/"/>
-    <id>http://djack.top/2018/03/27/gradle-spotbus-configuration/</id>
-    <published>2018-03-27T07:09:18.000Z</published>
-    <updated>2018-10-22T10:05:46.905Z</updated>
-    
-    <content type="html"><![CDATA[<p>SpotBugs是FindBugs的继任者，用来寻找Java代码中bug的静态分析工具，<a href="http://spotbugs-in-kengo-toda.readthedocs.io/en/latest/" target="_blank" rel="noopener">Read the Docs</a></p><h3 id="gradle配置"><a href="#gradle配置" class="headerlink" title="gradle配置"></a>gradle配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">plugins &#123;</span><br><span class="line">    id &quot;com.github.spotbugs&quot; version &quot;1.6.1&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">tasks.withType(com.github.spotbugs.SpotBugsTask) &#123;</span><br><span class="line">    reports &#123;</span><br><span class="line">        xml.enabled false</span><br><span class="line">        html.enabled true</span><br><span class="line">    &#125;</span><br><span class="line">    excludeFilter file(&apos;gradle/spotbugs-exclude.xml&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="spotbugs-exclude-xml"><a href="#spotbugs-exclude-xml" class="headerlink" title="spotbugs-exclude.xml"></a>spotbugs-exclude.xml</h3><ul><li><a href="http://spotbugs-in-kengo-toda.readthedocs.io/en/latest/filter.html#types-of-match-clauses" target="_blank" rel="noopener">Types of Match clauses</a></li><li><a href="http://spotbugs-in-kengo-toda.readthedocs.io/en/latest/bugDescriptions.html" target="_blank" rel="noopener">Bug descriptions</a></li><li>inner classes configuration use <a href="https://stackoverflow.com/questions/1073656/problems-with-findbugs-exclude-filter" target="_blank" rel="noopener"><strong>$</strong></a></li></ul><p><strong>example</strong></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">FindBugsFilter</span></span></span><br><span class="line"><span class="tag">              <span class="attr">xmlns</span>=<span class="string">"https://github.com/spotbugs/filter/3.0.0"</span></span></span><br><span class="line"><span class="tag">              <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">              <span class="attr">xsi:schemaLocation</span>=<span class="string">"https://github.com/spotbugs/filter/3.0.0 https://raw.githubusercontent.com/spotbugs/spotbugs/3.1.0_RC6/spotbugs/etc/findbugsfilter.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Match</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Class</span> <span class="attr">name</span>=<span class="string">"cn.foo.service.Client$UpdaterDTO"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Bug</span> <span class="attr">code</span>=<span class="string">"EI2"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Match</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Match</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Bug</span> <span class="attr">code</span>=<span class="string">"NP,MS,UwF"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Match</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">FindBugsFilter</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;SpotBugs是FindBugs的继任者，用来寻找Java代码中bug的静态分析工具，&lt;a href=&quot;http://spotbugs-in-kengo-toda.readthedocs.io/en/latest/&quot; target=&quot;_blank&quot; rel=&quot;noopen
-      
-    
-    </summary>
-    
-      <category term="devops" scheme="http://djack.top/categories/devops/"/>
-    
-    
-      <category term="gradle" scheme="http://djack.top/tags/gradle/"/>
-    
-      <category term="spotbus" scheme="http://djack.top/tags/spotbus/"/>
     
   </entry>
   

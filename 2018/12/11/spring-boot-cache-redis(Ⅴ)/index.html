@@ -3,26 +3,26 @@
 <head>
     <meta charset="utf-8">
     
-    <title>gradle spotbus configuration | Djack&#39;s Blog</title>
+    <title>Spring boot cache with redis(Ⅴ) | Djack&#39;s Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="gradle,spotbus" />
+        <meta name="keywords" content="redis,spring boot,cache,集成测试" />
     
-    <meta name="description" content="SpotBugs是FindBugs的继任者，用来寻找Java代码中bug的静态分析工具，Read the Docs gradle配置1234567891011plugins &amp;#123;    id &amp;quot;com.github.spotbugs&amp;quot; version &amp;quot;1.6.1&amp;quot;&amp;#125;tasks.withType(com.github.spotbugs.Sp">
-<meta name="keywords" content="gradle,spotbus">
+    <meta name="description" content="本篇简单介绍 Spring boot cache redis 开发，以及简单的集成测试，详细代码 Djack@github.com  gradle  12345678compile(      &amp;apos;org.springframework.data:spring-data-redis&amp;apos;,      &amp;apos;redis.clients:jedis&amp;apos;)testCompil">
+<meta name="keywords" content="redis,spring boot,cache,集成测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gradle spotbus configuration">
-<meta property="og:url" content="http://djack.top/2018/03/27/gradle-spotbus-configuration/index.html">
+<meta property="og:title" content="Spring boot cache with redis(Ⅴ)">
+<meta property="og:url" content="http://djack.top/2018/12/11/spring-boot-cache-redis(Ⅴ)/index.html">
 <meta property="og:site_name" content="Djack&#39;s Blog">
-<meta property="og:description" content="SpotBugs是FindBugs的继任者，用来寻找Java代码中bug的静态分析工具，Read the Docs gradle配置1234567891011plugins &amp;#123;    id &amp;quot;com.github.spotbugs&amp;quot; version &amp;quot;1.6.1&amp;quot;&amp;#125;tasks.withType(com.github.spotbugs.Sp">
+<meta property="og:description" content="本篇简单介绍 Spring boot cache redis 开发，以及简单的集成测试，详细代码 Djack@github.com  gradle  12345678compile(      &amp;apos;org.springframework.data:spring-data-redis&amp;apos;,      &amp;apos;redis.clients:jedis&amp;apos;)testCompil">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p6adyfyu5.bkt.clouddn.com/spotbugs-logo.png">
-<meta property="og:updated_time" content="2018-10-22T10:05:46.905Z">
+<meta property="og:image" content="https://i.imgur.com/HVfhEkg.png">
+<meta property="og:updated_time" content="2018-12-11T09:40:56.422Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gradle spotbus configuration">
-<meta name="twitter:description" content="SpotBugs是FindBugs的继任者，用来寻找Java代码中bug的静态分析工具，Read the Docs gradle配置1234567891011plugins &amp;#123;    id &amp;quot;com.github.spotbugs&amp;quot; version &amp;quot;1.6.1&amp;quot;&amp;#125;tasks.withType(com.github.spotbugs.Sp">
-<meta name="twitter:image" content="http://p6adyfyu5.bkt.clouddn.com/spotbugs-logo.png">
+<meta name="twitter:title" content="Spring boot cache with redis(Ⅴ)">
+<meta name="twitter:description" content="本篇简单介绍 Spring boot cache redis 开发，以及简单的集成测试，详细代码 Djack@github.com  gradle  12345678compile(      &amp;apos;org.springframework.data:spring-data-redis&amp;apos;,      &amp;apos;redis.clients:jedis&amp;apos;)testCompil">
+<meta name="twitter:image" content="https://i.imgur.com/HVfhEkg.png">
     
 
     
@@ -158,14 +158,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-gradle-spotbus-configuration" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-spring-boot-cache-redis(Ⅴ)" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        gradle spotbus configuration
+        Spring boot cache with redis(Ⅴ)
         </h1>
     
 
@@ -175,15 +175,15 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/03/27/gradle-spotbus-configuration/" class="article-date">
-            <time datetime="2018-03-27T07:09:18.000Z" itemprop="datePublished">2018-03-27</time>
+        <a href="/2018/12/11/spring-boot-cache-redis(Ⅴ)/" class="article-date">
+            <time datetime="2018-12-11T07:09:18.000Z" itemprop="datePublished">2018-12-11</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/gradle/">gradle</a>, <a class="tag-link" href="/tags/spotbus/">spotbus</a>
+        <a class="tag-link" href="/tags/cache/">cache</a>, <a class="tag-link" href="/tags/redis/">redis</a>, <a class="tag-link" href="/tags/spring-boot/">spring boot</a>, <a class="tag-link" href="/tags/集成测试/">集成测试</a>
     </div>
 
                 <span id="busuanzi_container_page_pv">本文被浏览 <span id="busuanzi_value_page_pv"></span> 次</span>
@@ -192,22 +192,32 @@
         
         <div class="article-entry" itemprop="articleBody">
             
-            <p>SpotBugs是FindBugs的继任者，用来寻找Java代码中bug的静态分析工具，<a href="http://spotbugs-in-kengo-toda.readthedocs.io/en/latest/" target="_blank" rel="noopener">Read the Docs</a></p>
-<h3 id="gradle配置"><a href="#gradle配置" class="headerlink" title="gradle配置"></a>gradle配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">plugins &#123;</span><br><span class="line">    id &quot;com.github.spotbugs&quot; version &quot;1.6.1&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">tasks.withType(com.github.spotbugs.SpotBugsTask) &#123;</span><br><span class="line">    reports &#123;</span><br><span class="line">        xml.enabled false</span><br><span class="line">        html.enabled true</span><br><span class="line">    &#125;</span><br><span class="line">    excludeFilter file(&apos;gradle/spotbugs-exclude.xml&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="spotbugs-exclude-xml"><a href="#spotbugs-exclude-xml" class="headerlink" title="spotbugs-exclude.xml"></a>spotbugs-exclude.xml</h3><ul>
-<li><a href="http://spotbugs-in-kengo-toda.readthedocs.io/en/latest/filter.html#types-of-match-clauses" target="_blank" rel="noopener">Types of Match clauses</a></li>
-<li><a href="http://spotbugs-in-kengo-toda.readthedocs.io/en/latest/bugDescriptions.html" target="_blank" rel="noopener">Bug descriptions</a></li>
-<li>inner classes configuration use <a href="https://stackoverflow.com/questions/1073656/problems-with-findbugs-exclude-filter" target="_blank" rel="noopener"><strong>$</strong></a></li>
+            <p>本篇简单介绍 <code>Spring boot</code> <code>cache</code> <code>redis</code> 开发，以及简单的集成测试，详细代码 <a href="https://github.com/Djacke/spring-boot-mmr-starter" target="_blank" rel="noopener">Djack@github.com</a></p>
+<ul>
+<li><p>gradle </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">compile(</span><br><span class="line">      &apos;org.springframework.data:spring-data-redis&apos;,</span><br><span class="line">      &apos;redis.clients:jedis&apos;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">testCompile(</span><br><span class="line">      &apos;com.github.kstyrc:embedded-redis:0.6&apos;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mock redis connection</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@Profile</span>(<span class="string">"integTest"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisConfig</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> RedisServer redisServer;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Value</span>(<span class="string">"localhost"</span>)</span><br><span class="line">  <span class="keyword">private</span> String redisHost;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Value</span>(<span class="string">"$&#123;random.int[58000,60000]&#125;"</span>)</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> redisPort;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Bean</span></span><br><span class="line">  <span class="meta">@Primary</span></span><br><span class="line">  <span class="function">JedisConnectionFactory <span class="title">jedisConnectionFactory</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    JedisConnectionFactory factory = <span class="keyword">new</span> JedisConnectionFactory(</span><br><span class="line">        <span class="keyword">new</span> RedisStandaloneConfiguration(redisHost, redisPort)</span><br><span class="line">    );</span><br><span class="line">    <span class="keyword">return</span> factory;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@PostConstruct</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startRedis</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    redisServer = <span class="keyword">new</span> RedisServer(redisPort);</span><br><span class="line">    redisServer.start();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@PreDestroy</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stopRedis</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    redisServer.stop();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cache configuration</p>
+<p>定义自己的cachemanage 和cache 名称，还有redis存储序列化的相关配置</p>
+</li>
+<li><p>cache service </p>
+<p>增加缓存的操作方法，注意使用如下注解<code>@Cacheable</code> <code>@CachePut</code> <code>@CacheEvict</code></p>
+</li>
+<li><p>启用缓存</p>
+<p>启动类增加注解 <code>@EnableCaching</code></p>
+</li>
 </ul>
-<p><strong>example</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">FindBugsFilter</span></span></span><br><span class="line"><span class="tag">              <span class="attr">xmlns</span>=<span class="string">"https://github.com/spotbugs/filter/3.0.0"</span></span></span><br><span class="line"><span class="tag">              <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">              <span class="attr">xsi:schemaLocation</span>=<span class="string">"https://github.com/spotbugs/filter/3.0.0 https://raw.githubusercontent.com/spotbugs/spotbugs/3.1.0_RC6/spotbugs/etc/findbugsfilter.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Match</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Class</span> <span class="attr">name</span>=<span class="string">"cn.foo.service.Client$UpdaterDTO"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Bug</span> <span class="attr">code</span>=<span class="string">"EI2"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Match</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Match</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">Bug</span> <span class="attr">code</span>=<span class="string">"NP,MS,UwF"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Match</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">FindBugsFilter</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://djack.top/2018/03/27/gradle-spotbus-configuration/" data-id="cjnyko2yt000lbs5x9d2qzn4w" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://djack.top/2018/12/11/spring-boot-cache-redis(Ⅴ)/" data-id="cjpjlgv5k0008b45xke9ijcty" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -318,20 +328,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/03/27/springboot-mybatis-gradle-mysql-h2/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2018/12/11/spring-boot-spotbus(Ⅱ)/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            spring boot + gradle + mybatis + mysql + H2
+            Spring boot spotbus(Ⅱ)
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2018/03/19/game-wangzherongyao/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/12/11/spring-boot-mongodb(Ⅰ)/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">王者荣耀游戏分享</p>
+        <p class="article-nav-title">Spring boot mongodb(Ⅰ)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -346,6 +356,86 @@
         <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/12/11/spring-boot-spotbus(Ⅱ)/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/spotbugs-logo.png)" alt="Spring boot spotbus(Ⅱ)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
+                            <p class="item-title"><a href="/2018/12/11/spring-boot-spotbus(Ⅱ)/" class="title">Spring boot spotbus(Ⅱ)</a></p>
+                            <p class="item-date"><time datetime="2018-12-11T07:09:18.000Z" itemprop="datePublished">2018-12-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/12/11/spring-boot-cache-redis(Ⅴ)/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://i.imgur.com/HVfhEkg.png)" alt="Spring boot cache with redis(Ⅴ)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
+                            <p class="item-title"><a href="/2018/12/11/spring-boot-cache-redis(Ⅴ)/" class="title">Spring boot cache with redis(Ⅴ)</a></p>
+                            <p class="item-date"><time datetime="2018-12-11T07:09:18.000Z" itemprop="datePublished">2018-12-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/12/11/spring-boot-mongodb(Ⅰ)/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://i.imgur.com/qgRaRlu.png)" alt="Spring boot mongodb(Ⅰ)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
+                            <p class="item-title"><a href="/2018/12/11/spring-boot-mongodb(Ⅰ)/" class="title">Spring boot mongodb(Ⅰ)</a></p>
+                            <p class="item-date"><time datetime="2018-12-11T07:09:18.000Z" itemprop="datePublished">2018-12-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/12/11/spring-boot-rabbitmq(Ⅳ)/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://i.loli.net/2018/12/11/5c0f8f5136c02.png)" alt="Spring boot rabbitmq(Ⅳ)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
+                            <p class="item-title"><a href="/2018/12/11/spring-boot-rabbitmq(Ⅳ)/" class="title">Spring boot rabbitmq(Ⅳ)</a></p>
+                            <p class="item-date"><time datetime="2018-12-11T07:09:18.000Z" itemprop="datePublished">2018-12-11</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -367,86 +457,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/04/02/idea-plugn-lombok/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/idea-logo2.png)" alt="idea中安装使用lombok" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/tools/">tools</a></p>
-                            <p class="item-title"><a href="/2018/04/02/idea-plugn-lombok/" class="title">idea中安装使用lombok</a></p>
-                            <p class="item-date"><time datetime="2018-04-02T08:06:12.000Z" itemprop="datePublished">2018-04-02</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/03/28/docker-redis-sentinel/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/redis-sentinel.png)" alt="redis-sentinel-docker" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
-                            <p class="item-title"><a href="/2018/03/28/docker-redis-sentinel/" class="title">redis-sentinel-docker</a></p>
-                            <p class="item-date"><time datetime="2018-03-28T03:33:14.000Z" itemprop="datePublished">2018-03-28</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/03/28/spring-schedule-redis-lock/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/redis-redis.jpg)" alt="spring-schedule-redis-lock" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
-                            <p class="item-title"><a href="/2018/03/28/spring-schedule-redis-lock/" class="title">spring-schedule-redis-lock</a></p>
-                            <p class="item-date"><time datetime="2018-03-28T03:30:25.000Z" itemprop="datePublished">2018-03-28</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/03/27/springboot-mybatis-gradle-mysql-h2/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/timg.jpeg)" alt="spring boot + gradle + mybatis + mysql + H2" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
-                            <p class="item-title"><a href="/2018/03/27/springboot-mybatis-gradle-mysql-h2/" class="title">spring boot + gradle + mybatis + mysql + H2</a></p>
-                            <p class="item-date"><time datetime="2018-03-27T07:09:18.000Z" itemprop="datePublished">2018-03-27</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -456,7 +466,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/devops/">devops</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/spring-boot/">spring boot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/devops/">devops</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/spring-boot/">spring boot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -466,7 +476,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -476,7 +486,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/H2/">H2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring-boot/">Spring boot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/">idea</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lombok/">lombok</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/">redis</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spotbus/">spotbus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/王者荣耀/">王者荣耀</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/H2/">H2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/">idea</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lombok/">lombok</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rabbitmq/">rabbitmq</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/">redis</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spotbus/">spotbus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/王者荣耀/">王者荣耀</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/集成测试/">集成测试</a><span class="tag-list-count">5</span></li></ul>
         </div>
     </div>
 
@@ -486,7 +496,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/H2/" style="font-size: 10px;">H2</a> <a href="/tags/Spring-boot/" style="font-size: 10px;">Spring boot</a> <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/gradle/" style="font-size: 20px;">gradle</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/lombok/" style="font-size: 10px;">lombok</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/redis/" style="font-size: 20px;">redis</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/spotbus/" style="font-size: 10px;">spotbus</a> <a href="/tags/spring-boot/" style="font-size: 10px;">spring boot</a> <a href="/tags/王者荣耀/" style="font-size: 10px;">王者荣耀</a>
+            <a href="/tags/H2/" style="font-size: 10px;">H2</a> <a href="/tags/blog/" style="font-size: 12.5px;">blog</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/gradle/" style="font-size: 15px;">gradle</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/lombok/" style="font-size: 10px;">lombok</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/rabbitmq/" style="font-size: 10px;">rabbitmq</a> <a href="/tags/redis/" style="font-size: 15px;">redis</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/spotbus/" style="font-size: 10px;">spotbus</a> <a href="/tags/spring-boot/" style="font-size: 20px;">spring boot</a> <a href="/tags/王者荣耀/" style="font-size: 10px;">王者荣耀</a> <a href="/tags/集成测试/" style="font-size: 17.5px;">集成测试</a>
         </div>
     </div>
 
@@ -542,7 +552,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://djack.top/2018/03/27/gradle-spotbus-configuration/';
+    var disqus_url = 'http://djack.top/2018/12/11/spring-boot-cache-redis(Ⅴ)/';
     
     (function() {
     var dsq = document.createElement('script');

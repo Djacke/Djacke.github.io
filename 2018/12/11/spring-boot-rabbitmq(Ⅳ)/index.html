@@ -3,26 +3,26 @@
 <head>
     <meta charset="utf-8">
     
-    <title>spring boot + gradle + mybatis + mysql + H2 | Djack&#39;s Blog</title>
+    <title>Spring boot rabbitmq(Ⅳ) | Djack&#39;s Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="gradle,mysql,H2,Spring boot" />
+        <meta name="keywords" content="spring boot,集成测试,rabbitmq" />
     
-    <meta name="description" content="本篇记录最近公司开发的新CRM系统，架构采用spring boot + gradle + mybatis + mysql，测试数据库用H2，但是发现H2对mysql的函数支持的不是很好，所以单元测试有一定局限性。 build.gradle省略了Springboot 项目的通用配置12345678&amp;apos;mysql:mysql-connector-java&amp;apos;,&amp;apos;org.myb">
-<meta name="keywords" content="gradle,mysql,H2,Spring boot">
+    <meta name="description" content="本篇简单介绍 Spring boot rabbitmq 开发，以及简单的集成测试，详细代码 Djack@github.com  gradle  123compile(&amp;apos;org.springframework.boot:spring-boot-starter-amqp&amp;apos;)testCompile(&amp;apos;org.apache.qpid:qpid-broker:6.1.2&amp;apo">
+<meta name="keywords" content="spring boot,集成测试,rabbitmq">
 <meta property="og:type" content="article">
-<meta property="og:title" content="spring boot + gradle + mybatis + mysql + H2">
-<meta property="og:url" content="http://djack.top/2018/03/27/springboot-mybatis-gradle-mysql-h2/index.html">
+<meta property="og:title" content="Spring boot rabbitmq(Ⅳ)">
+<meta property="og:url" content="http://djack.top/2018/12/11/spring-boot-rabbitmq(Ⅳ)/index.html">
 <meta property="og:site_name" content="Djack&#39;s Blog">
-<meta property="og:description" content="本篇记录最近公司开发的新CRM系统，架构采用spring boot + gradle + mybatis + mysql，测试数据库用H2，但是发现H2对mysql的函数支持的不是很好，所以单元测试有一定局限性。 build.gradle省略了Springboot 项目的通用配置12345678&amp;apos;mysql:mysql-connector-java&amp;apos;,&amp;apos;org.myb">
+<meta property="og:description" content="本篇简单介绍 Spring boot rabbitmq 开发，以及简单的集成测试，详细代码 Djack@github.com  gradle  123compile(&amp;apos;org.springframework.boot:spring-boot-starter-amqp&amp;apos;)testCompile(&amp;apos;org.apache.qpid:qpid-broker:6.1.2&amp;apo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p6adyfyu5.bkt.clouddn.com/timg.jpeg">
-<meta property="og:updated_time" content="2018-11-02T01:31:51.620Z">
+<meta property="og:image" content="https://i.loli.net/2018/12/11/5c0f8f5136c02.png">
+<meta property="og:updated_time" content="2018-12-11T10:19:47.170Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spring boot + gradle + mybatis + mysql + H2">
-<meta name="twitter:description" content="本篇记录最近公司开发的新CRM系统，架构采用spring boot + gradle + mybatis + mysql，测试数据库用H2，但是发现H2对mysql的函数支持的不是很好，所以单元测试有一定局限性。 build.gradle省略了Springboot 项目的通用配置12345678&amp;apos;mysql:mysql-connector-java&amp;apos;,&amp;apos;org.myb">
-<meta name="twitter:image" content="http://p6adyfyu5.bkt.clouddn.com/timg.jpeg">
+<meta name="twitter:title" content="Spring boot rabbitmq(Ⅳ)">
+<meta name="twitter:description" content="本篇简单介绍 Spring boot rabbitmq 开发，以及简单的集成测试，详细代码 Djack@github.com  gradle  123compile(&amp;apos;org.springframework.boot:spring-boot-starter-amqp&amp;apos;)testCompile(&amp;apos;org.apache.qpid:qpid-broker:6.1.2&amp;apo">
+<meta name="twitter:image" content="https://i.loli.net/2018/12/11/5c0f8f5136c02.png">
     
 
     
@@ -158,14 +158,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-springboot-mybatis-gradle-mysql-h2" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-spring-boot-rabbitmq(Ⅳ)" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        spring boot + gradle + mybatis + mysql + H2
+        Spring boot rabbitmq(Ⅳ)
         </h1>
     
 
@@ -175,15 +175,15 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/03/27/springboot-mybatis-gradle-mysql-h2/" class="article-date">
-            <time datetime="2018-03-27T07:09:18.000Z" itemprop="datePublished">2018-03-27</time>
+        <a href="/2018/12/11/spring-boot-rabbitmq(Ⅳ)/" class="article-date">
+            <time datetime="2018-12-11T07:09:18.000Z" itemprop="datePublished">2018-12-11</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/H2/">H2</a>, <a class="tag-link" href="/tags/Spring-boot/">Spring boot</a>, <a class="tag-link" href="/tags/gradle/">gradle</a>, <a class="tag-link" href="/tags/mysql/">mysql</a>
+        <a class="tag-link" href="/tags/rabbitmq/">rabbitmq</a>, <a class="tag-link" href="/tags/spring-boot/">spring boot</a>, <a class="tag-link" href="/tags/集成测试/">集成测试</a>
     </div>
 
                 <span id="busuanzi_container_page_pv">本文被浏览 <span id="busuanzi_value_page_pv"></span> 次</span>
@@ -192,20 +192,24 @@
         
         <div class="article-entry" itemprop="articleBody">
             
-            <p>本篇记录最近公司开发的新CRM系统，架构采用spring boot + gradle + mybatis + mysql，测试数据库用H2，但是发现H2对mysql的函数支持的不是很好，所以单元测试有一定局限性。</p>
-<h3 id="build-gradle"><a href="#build-gradle" class="headerlink" title="build.gradle"></a>build.gradle</h3><p>省略了Springboot 项目的通用配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&apos;mysql:mysql-connector-java&apos;,</span><br><span class="line">&apos;org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2&apos;,</span><br><span class="line">&apos;tk.mybatis:mapper-spring-boot-starter:1.2.4&apos;,</span><br><span class="line">//分页</span><br><span class="line">&apos;com.github.pagehelper:pagehelper-spring-boot-starter:1.2.3&apos;,</span><br><span class="line">&apos;org.springframework.cloud:spring-cloud-starter-openfeign&apos;,</span><br><span class="line">//枚举处理</span><br><span class="line">&apos;org.mybatis:mybatis-typehandlers-jsr310:1.0.2&apos;,</span><br></pre></td></tr></table></figure></p>
-<h3 id="bootstrap-yml"><a href="#bootstrap-yml" class="headerlink" title="bootstrap.yml"></a>bootstrap.yml</h3><ul>
-<li><p>MYSQL</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  profiles: development #开发环境</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">    username: username</span><br><span class="line">    password: password</span><br><span class="line">    url: jdbc:mysql://localhost:3306/testdb</span><br></pre></td></tr></table></figure>
+            <p>本篇简单介绍 <code>Spring boot</code> <code>rabbitmq</code> 开发，以及简单的集成测试，详细代码 <a href="https://github.com/Djacke/spring-boot-mmr-starter" target="_blank" rel="noopener">Djack@github.com</a></p>
+<ul>
+<li><p>gradle </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">compile(&apos;org.springframework.boot:spring-boot-starter-amqp&apos;)</span><br><span class="line"></span><br><span class="line">testCompile(&apos;org.apache.qpid:qpid-broker:6.1.2&apos;)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>H2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  profiles: integTest #测试环境</span><br><span class="line">  h2:</span><br><span class="line">    console:</span><br><span class="line">      enabled: true</span><br><span class="line">      path: /h2</span><br><span class="line">  datasource:</span><br><span class="line">    url: jdbc:h2:mem:testdb;MODE=MYSQL;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false</span><br><span class="line">    driver-class-name: org.h2.Driver</span><br><span class="line">    username: sa</span><br><span class="line">    password: sa</span><br><span class="line">    schema: classpath:db/*.sql   #测试用的建表语句</span><br><span class="line">    #schema-username: sa </span><br><span class="line">    #schema-password: sa</span><br><span class="line">    #data-username: sa</span><br><span class="line">    #data-password: sa</span><br><span class="line">    #initialization-mode: always</span><br><span class="line">    #platform: h2</span><br><span class="line">//分页配置</span><br><span class="line">pagehelper:</span><br><span class="line">  helperDialect: h2</span><br><span class="line">  reasonable: true</span><br><span class="line">  supportMethodsArguments: true</span><br><span class="line">  params: count=countSql</span><br></pre></td></tr></table></figure>
+<li><p>config</p>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> 测试目录下模拟启动amqp</li>
+<li style="list-style: none"><input type="checkbox" checked> 申明mq的exchange 和 queue</li>
+</ul>
 </li>
-<li><p>MYBATIS</p>
+<li><p>rabbit mq listener</p>
+<p>监听队列，接收消息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@RabbitListener(queues = AmqpConfig.RECEIPT_VOUCHER_QUEUE)</span><br><span class="line">public void receive(String message) throws IOException &#123;</span><br><span class="line">  System.out.println(&quot;接受消息内容:&quot; + message);</span><br><span class="line">  messageDatas.add(objectMapper.readValue(message, ContactPerson.class));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>integration test<br>发送消息到测试队列，并检查消费是否成功</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapperLocations: classpath:mapper/*.xml</span><br><span class="line">  typeHandlersPackage: cn.pilipa.customer.management.handler #特殊处理handler</span><br><span class="line">  configuration:</span><br><span class="line">    mapUnderscoreToCamelCase: true</span><br></pre></td></tr></table></figure>
-<p>java 代码采用通用的开发模式，即controller 调用service，service负责处理复杂的业务逻辑，调用持久层api，持久层api采用mapper接口的方式，xml中可以添加适当复杂的sql查询</p>
 
         </div>
         <footer class="article-footer">
@@ -213,7 +217,7 @@
 
 
 
-    <a data-url="http://djack.top/2018/03/27/springboot-mybatis-gradle-mysql-h2/" data-id="cjnyko2yr000fbs5xax8zmu3z" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://djack.top/2018/12/11/spring-boot-rabbitmq(Ⅳ)/" data-id="cjpjlgv5r000eb45xxhys0y6n" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -324,20 +328,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/03/28/spring-schedule-redis-lock/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2018/12/11/spring-boot-mongodb(Ⅰ)/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            spring-schedule-redis-lock
+            Spring boot mongodb(Ⅰ)
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2018/03/27/gradle-spotbus-configuration/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/04/24/spring-boot-2-jar/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">gradle spotbus configuration</p>
+        <p class="article-nav-title">spring boot 2.0 build executable jar</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -352,6 +356,86 @@
         <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/12/11/spring-boot-spotbus(Ⅱ)/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/spotbugs-logo.png)" alt="Spring boot spotbus(Ⅱ)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
+                            <p class="item-title"><a href="/2018/12/11/spring-boot-spotbus(Ⅱ)/" class="title">Spring boot spotbus(Ⅱ)</a></p>
+                            <p class="item-date"><time datetime="2018-12-11T07:09:18.000Z" itemprop="datePublished">2018-12-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/12/11/spring-boot-cache-redis(Ⅴ)/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://i.imgur.com/HVfhEkg.png)" alt="Spring boot cache with redis(Ⅴ)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
+                            <p class="item-title"><a href="/2018/12/11/spring-boot-cache-redis(Ⅴ)/" class="title">Spring boot cache with redis(Ⅴ)</a></p>
+                            <p class="item-date"><time datetime="2018-12-11T07:09:18.000Z" itemprop="datePublished">2018-12-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/12/11/spring-boot-mongodb(Ⅰ)/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://i.imgur.com/qgRaRlu.png)" alt="Spring boot mongodb(Ⅰ)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
+                            <p class="item-title"><a href="/2018/12/11/spring-boot-mongodb(Ⅰ)/" class="title">Spring boot mongodb(Ⅰ)</a></p>
+                            <p class="item-date"><time datetime="2018-12-11T07:09:18.000Z" itemprop="datePublished">2018-12-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/12/11/spring-boot-rabbitmq(Ⅳ)/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://i.loli.net/2018/12/11/5c0f8f5136c02.png)" alt="Spring boot rabbitmq(Ⅳ)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
+                            <p class="item-title"><a href="/2018/12/11/spring-boot-rabbitmq(Ⅳ)/" class="title">Spring boot rabbitmq(Ⅳ)</a></p>
+                            <p class="item-date"><time datetime="2018-12-11T07:09:18.000Z" itemprop="datePublished">2018-12-11</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -373,86 +457,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/04/02/idea-plugn-lombok/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/idea-logo2.png)" alt="idea中安装使用lombok" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/tools/">tools</a></p>
-                            <p class="item-title"><a href="/2018/04/02/idea-plugn-lombok/" class="title">idea中安装使用lombok</a></p>
-                            <p class="item-date"><time datetime="2018-04-02T08:06:12.000Z" itemprop="datePublished">2018-04-02</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/03/28/docker-redis-sentinel/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/redis-sentinel.png)" alt="redis-sentinel-docker" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
-                            <p class="item-title"><a href="/2018/03/28/docker-redis-sentinel/" class="title">redis-sentinel-docker</a></p>
-                            <p class="item-date"><time datetime="2018-03-28T03:33:14.000Z" itemprop="datePublished">2018-03-28</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/03/28/spring-schedule-redis-lock/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/redis-redis.jpg)" alt="spring-schedule-redis-lock" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
-                            <p class="item-title"><a href="/2018/03/28/spring-schedule-redis-lock/" class="title">spring-schedule-redis-lock</a></p>
-                            <p class="item-date"><time datetime="2018-03-28T03:30:25.000Z" itemprop="datePublished">2018-03-28</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/03/27/springboot-mybatis-gradle-mysql-h2/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://p6adyfyu5.bkt.clouddn.com/timg.jpeg)" alt="spring boot + gradle + mybatis + mysql + H2" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/devops/">devops</a></p>
-                            <p class="item-title"><a href="/2018/03/27/springboot-mybatis-gradle-mysql-h2/" class="title">spring boot + gradle + mybatis + mysql + H2</a></p>
-                            <p class="item-date"><time datetime="2018-03-27T07:09:18.000Z" itemprop="datePublished">2018-03-27</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -462,7 +466,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/devops/">devops</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/spring-boot/">spring boot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/devops/">devops</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/spring-boot/">spring boot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -472,7 +476,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -482,7 +486,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/H2/">H2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring-boot/">Spring boot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/">idea</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lombok/">lombok</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/">redis</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spotbus/">spotbus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/王者荣耀/">王者荣耀</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/H2/">H2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/">idea</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lombok/">lombok</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rabbitmq/">rabbitmq</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/">redis</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spotbus/">spotbus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/王者荣耀/">王者荣耀</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/集成测试/">集成测试</a><span class="tag-list-count">5</span></li></ul>
         </div>
     </div>
 
@@ -492,7 +496,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/H2/" style="font-size: 10px;">H2</a> <a href="/tags/Spring-boot/" style="font-size: 10px;">Spring boot</a> <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/gradle/" style="font-size: 20px;">gradle</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/lombok/" style="font-size: 10px;">lombok</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/redis/" style="font-size: 20px;">redis</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/spotbus/" style="font-size: 10px;">spotbus</a> <a href="/tags/spring-boot/" style="font-size: 10px;">spring boot</a> <a href="/tags/王者荣耀/" style="font-size: 10px;">王者荣耀</a>
+            <a href="/tags/H2/" style="font-size: 10px;">H2</a> <a href="/tags/blog/" style="font-size: 12.5px;">blog</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/gradle/" style="font-size: 15px;">gradle</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/lombok/" style="font-size: 10px;">lombok</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/rabbitmq/" style="font-size: 10px;">rabbitmq</a> <a href="/tags/redis/" style="font-size: 15px;">redis</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/spotbus/" style="font-size: 10px;">spotbus</a> <a href="/tags/spring-boot/" style="font-size: 20px;">spring boot</a> <a href="/tags/王者荣耀/" style="font-size: 10px;">王者荣耀</a> <a href="/tags/集成测试/" style="font-size: 17.5px;">集成测试</a>
         </div>
     </div>
 
@@ -548,7 +552,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://djack.top/2018/03/27/springboot-mybatis-gradle-mysql-h2/';
+    var disqus_url = 'http://djack.top/2018/12/11/spring-boot-rabbitmq(Ⅳ)/';
     
     (function() {
     var dsq = document.createElement('script');
