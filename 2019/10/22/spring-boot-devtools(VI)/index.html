@@ -3,21 +3,26 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     
-    <title>about | Djack&#39;s Blog</title>
+    <title>Spring boot devtools(VⅠ) | Djack&#39;s Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="随笔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://djack.top/about/index.html">
+        <meta name="keywords" content="spring boot,集成测试,gradle,devtools">
+    
+    <meta name="description" content="小记：  说点题外话，最近经历了公司大裁员，所以得空记录点微服务开发的小技巧；说起裁员，相信很多人都不会遇到，谁也不希望遇到；18年初公司B轮融资敲定，管理团队大刀阔斧，招兵买马，各业务线多点开花（未结果），研发团队一度扩招到100人的规模，大家积极努力，拼劲十足，似乎未来一片光明，直到今年九月，公司情况急转直下，先是搬离办公区（不到一年），接着大裁员，多条业务线停滞，留下的人大多驻足观望，眼前只">
+<meta name="keywords" content="spring boot,集成测试,gradle,devtools">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring boot devtools(VⅠ)">
+<meta property="og:url" content="http://djack.top/2019/10/22/spring-boot-devtools(VI)/index.html">
 <meta property="og:site_name" content="Djack&#39;s Blog">
-<meta property="og:description" content="随笔">
+<meta property="og:description" content="小记：  说点题外话，最近经历了公司大裁员，所以得空记录点微服务开发的小技巧；说起裁员，相信很多人都不会遇到，谁也不希望遇到；18年初公司B轮融资敲定，管理团队大刀阔斧，招兵买马，各业务线多点开花（未结果），研发团队一度扩招到100人的规模，大家积极努力，拼劲十足，似乎未来一片光明，直到今年九月，公司情况急转直下，先是搬离办公区（不到一年），接着大裁员，多条业务线停滞，留下的人大多驻足观望，眼前只">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-22T10:05:46.908Z">
+<meta property="og:image" content="https://i.loli.net/2019/10/22/pGqRCIOZs3kg6oH.jpg">
+<meta property="og:updated_time" content="2019-10-22T10:14:38.893Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="随笔">
+<meta name="twitter:title" content="Spring boot devtools(VⅠ)">
+<meta name="twitter:description" content="小记：  说点题外话，最近经历了公司大裁员，所以得空记录点微服务开发的小技巧；说起裁员，相信很多人都不会遇到，谁也不希望遇到；18年初公司B轮融资敲定，管理团队大刀阔斧，招兵买马，各业务线多点开花（未结果），研发团队一度扩招到100人的规模，大家积极努力，拼劲十足，似乎未来一片光明，直到今年九月，公司情况急转直下，先是搬离办公区（不到一年），接着大裁员，多条业务线停滞，留下的人大多驻足观望，眼前只">
+<meta name="twitter:image" content="https://i.loli.net/2019/10/22/pGqRCIOZs3kg6oH.jpg">
     
 
     
@@ -149,35 +154,70 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="/about/index.html">about</em>
+    <a class="page-title-link" href="/categories/devops/">devops</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="page-" class="article article-single article-type-page" itemscope="" itemprop="blogPost">
+                            <article id="post-spring-boot-devtools(VI)" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        about
+        Spring boot devtools(VⅠ)
         </h1>
     
 
             </header>
         
         
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/10/22/spring-boot-devtools(VI)/" class="article-date">
+            <time datetime="2019-10-22T08:32:18.000Z" itemprop="datePublished">2019-10-22</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/devtools/">devtools</a>, <a class="tag-link" href="/tags/gradle/">gradle</a>, <a class="tag-link" href="/tags/spring-boot/">spring boot</a>, <a class="tag-link" href="/tags/集成测试/">集成测试</a>
+    </div>
+
+                <span id="busuanzi_container_page_pv">本文被浏览 <span id="busuanzi_value_page_pv"></span> 次</span>
+            </div>
+        
         
         <div class="article-entry" itemprop="articleBody">
             
-            
+            <p>小记：</p>
+<blockquote>
+<p>说点题外话，最近经历了公司大裁员，所以得空记录点微服务开发的小技巧；说起裁员，相信很多人都不会遇到，谁也不希望遇到；18年初公司B轮融资敲定，管理团队大刀阔斧，招兵买马，各业务线多点开花（未结果），研发团队一度扩招到100人的规模，大家积极努力，拼劲十足，似乎未来一片光明，直到今年九月，公司情况急转直下，先是搬离办公区（不到一年），接着大裁员，多条业务线停滞，留下的人大多驻足观望，眼前只有漆黑一片，谁也说不好是冬至日的黑夜还是黎明前的黑夜，唯有沉下心来学习知识方能慰藉失落的心情…</p>
+</blockquote>
+<p>言归正传。。。</p>
+<p>本篇记录下如何在idea上自启动Spring boot的项目，相信很多人都知道依赖 devtools库，但是还是有很多同学没有实现自启动，这当然是一个需要花点时间解决的问题，不解决貌似也不会影响多少效率。</p>
+<h4 id="配置gradle"><a href="#配置gradle" class="headerlink" title="配置gradle"></a>配置gradle</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">configurations &#123;</span><br><span class="line">    developmentOnly</span><br><span class="line">    runtimeClasspath &#123;</span><br><span class="line">        extendsFrom developmentOnly</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line">  developmentOnly(&quot;org.springframework.boot:spring-boot-devtools&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="手动实现"><a href="#手动实现" class="headerlink" title="手动实现"></a>手动实现</h4><p>点击 <code>Idea Build</code> &gt; <code>Rebuild Project</code> 便可触发Spring boot 项目重启，这种方式跟点击<code>Rerun</code>没什么区别，因为devtools监听的是你的.class 文件是否更新，所以必须重新编译；网上有人说勾选<br><code>file-&gt;settings-&gt;build,execution,deployment. Go to -&gt;compiler-&gt;build project automatically</code>但是我的Idea这个选项后边有个注释<code>only works while not runing or debugging</code>，所以亲测无效。</p>
+<h4 id="半自动😂"><a href="#半自动😂" class="headerlink" title="半自动😂"></a>半自动😂</h4><p><a href="https://tomyjaya.github.io/2016/10/08/spring-boot-dev-tools-in-intellij/" target="_blank" rel="noopener">Document</a></p>
+<ul>
+<li>Edit - Macros - Start Macro Recording</li>
+<li>File - Save All</li>
+<li>Build - Build Project</li>
+<li>Edit - Macros - Stop Macro Recording - 保存并命名 “Save &amp; Make Project”</li>
+<li>Preferences - Keymap - Macros - 双击 <code>Add Keyboard Shortcut</code> 然后根据你的系统和使用习惯<br>设置快捷键，比如我的是mac：<code>^s</code>, OK - OK.</li>
+</ul>
+<p>设置完成，编辑.java 文件，然后 <code>^s</code> 就会发现Idea自动编译并重启了。</p>
+<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p><a href="https://stackoverflow.com/questions/33869606/intellij-15-springboot-devtools-livereload-not-working" target="_blank" rel="noopener">stackoverflow</a><br>基本解答了大部分问题</p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://djack.top/about/index.html" data-id="ck22wu4nj0001np5xzyasmrq3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://djack.top/2019/10/22/spring-boot-devtools(VI)/" data-id="ck22wu4nz000lnp5xmw1k1gol" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -284,6 +324,19 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/12/11/spring-boot-cache-redis(Ⅴ)/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Spring boot cache with redis(Ⅴ)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -489,7 +542,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://djack.top/about/index.html';
+    var disqus_url = 'http://djack.top/2019/10/22/spring-boot-devtools(VI)/';
     
     (function() {
     var dsq = document.createElement('script');
