@@ -3,20 +3,26 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     
-    <title>标签：: mysql | Djack&#39;s Blog</title>
+    <title>linux下给非root用户设置sudo权限 | Djack&#39;s Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="随笔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Djack&#39;s Blog">
-<meta property="og:url" content="http://djack.top/tags/mysql/index.html">
+        <meta name="keywords" content="linux">
+    
+    <meta name="description" content="linux系统（Centos7.x）下给非root用户增加sudo权限。  首先创建新用户  useradd lily, passwd passwrod   安装sudo yum install sudo //这个安装包很小，不到1M   设置12345678[root@xx ~]$ su root[root@xx ~]$ vi /etc/sudoers定位到这一行：  root	ALL=(ALL">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux下给非root用户设置sudo权限">
+<meta property="og:url" content="http://djack.top/2019/11/20/Linux-chmod-sudo/index.html">
 <meta property="og:site_name" content="Djack&#39;s Blog">
-<meta property="og:description" content="随笔">
+<meta property="og:description" content="linux系统（Centos7.x）下给非root用户增加sudo权限。  首先创建新用户  useradd lily, passwd passwrod   安装sudo yum install sudo //这个安装包很小，不到1M   设置12345678[root@xx ~]$ su root[root@xx ~]$ vi /etc/sudoers定位到这一行：  root	ALL=(ALL">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.loli.net/2019/11/20/ufK74WhaeQ2EjmL.jpg">
+<meta property="og:updated_time" content="2019-11-20T09:22:51.093Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Djack&#39;s Blog">
-<meta name="twitter:description" content="随笔">
+<meta name="twitter:title" content="linux下给非root用户设置sudo权限">
+<meta name="twitter:description" content="linux系统（Centos7.x）下给非root用户增加sudo权限。  首先创建新用户  useradd lily, passwd passwrod   安装sudo yum install sudo //这个安装包很小，不到1M   设置12345678[root@xx ~]$ su root[root@xx ~]$ vi /etc/sudoers定位到这一行：  root	ALL=(ALL">
+<meta name="twitter:image" content="https://i.loli.net/2019/11/20/ufK74WhaeQ2EjmL.jpg">
     
 
     
@@ -148,76 +154,145 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>标签：: <em>mysql</em>
+    <a class="page-title-link" href="/categories/devops/">devops</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Linux-chmod-sudo" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/03/27/spring-boot-mybatis&h2(Ⅲ)/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://i.loli.net/2018/12/11/5c0f923fc33e2.jpg)" alt="Spring boot mybatis&amp;H2(Ⅲ)" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://djack.top/2018/03/27/spring-boot-mybatis&amp;h2(Ⅲ)/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/devops/">devops</a>
-            </div>
-            <div class="date"><time datetime="2018-03-27T07:09:18.000Z" itemprop="datePublished">2018-03-27</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/03/27/spring-boot-mybatis&h2(Ⅲ)/">Spring boot mybatis&amp;H2(Ⅲ)</a>
+        linux下给非root用户设置sudo权限
         </h1>
     
 
-        <p class="article-excerpt">
-            本篇记录最近公司开发的新CRM系统，架构采用spring boot gradle mysql，测试数据库用H2，但是发现H2对mysql的函数支持的不是很好，所以单元测试有一定局限性。详细代码 我是链接
-build.gradle省略了Springboot 项目的通用配置12345678&apos;mysql:mysql-connector-java&apos;,&apos;org.mybatis.
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/11/20/Linux-chmod-sudo/" class="article-date">
+            <time datetime="2019-11-20T10:52:14.000Z" itemprop="datePublished">2019-11-20</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/linux/">linux</a>
+    </div>
+
+                <span id="busuanzi_container_page_pv">本文被浏览 <span id="busuanzi_value_page_pv"></span> 次</span>
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p>linux系统（Centos7.x）下给非root用户增加sudo权限。</p>
+<ol>
+<li>首先创建新用户 <blockquote>
+<p><code>useradd lily</code>, <code>passwd passwrod</code></p>
+</blockquote>
+</li>
+<li>安装sudo<blockquote>
+<p>yum install sudo //这个安装包很小，不到1M</p>
+</blockquote>
+</li>
+<li>设置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@xx ~]$ su root</span><br><span class="line">[root@xx ~]$ vi /etc/sudoers</span><br><span class="line"></span><br><span class="line">定位到这一行：  root	ALL=(ALL) 	ALL</span><br><span class="line">接着新增： lily	ALL=(ALL) 	ALL</span><br><span class="line"></span><br><span class="line">esc</span><br><span class="line">:wq</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://djack.top/2019/11/20/Linux-chmod-sudo/" data-id="ck372wpdb00029c5x83z73x3o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
-        </div>
-    
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNTMzMy8xMTg2OQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
+       if (typeof LivereTower === 'function') { return; }
 
-    </div></section>
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
 
-
-
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
                         </div>
                     </section>
                     <aside id="sidebar">
@@ -244,6 +319,19 @@ build.gradle省略了Springboot 项目的通用配置12345678&apos;mysql:mysql-c
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/11/20/Linux-ssh-free-secret/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">linux ssh free secret</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -449,11 +537,13 @@ build.gradle省略了Springboot 项目的通用配置12345678&apos;mysql:mysql-c
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://djack.top/2019/11/20/Linux-chmod-sudo/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

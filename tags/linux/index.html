@@ -3,14 +3,14 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     
-    <title>标签：: mysql | Djack&#39;s Blog</title>
+    <title>标签：: linux | Djack&#39;s Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="description" content="随笔">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Djack&#39;s Blog">
-<meta property="og:url" content="http://djack.top/tags/mysql/index.html">
+<meta property="og:url" content="http://djack.top/tags/linux/index.html">
 <meta property="og:site_name" content="Djack&#39;s Blog">
 <meta property="og:description" content="随笔">
 <meta property="og:locale" content="zh-CN">
@@ -148,7 +148,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>标签：: <em>mysql</em>
+    <i class="icon fa fa-tag"></i>标签：: <em>linux</em>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -160,7 +160,7 @@
         
         <section class="archives-wrap">
             <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
+                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
             </div>
             <div class="archives">
     
@@ -171,17 +171,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2018/03/27/spring-boot-mybatis&h2(Ⅲ)/" class="thumbnail">
+        <a href="/2019/11/20/Linux-chmod-sudo/" class="thumbnail">
     
     
-        <span style="background-image:url(https://i.loli.net/2018/12/11/5c0f923fc33e2.jpg)" alt="Spring boot mybatis&amp;H2(Ⅲ)" class="thumbnail-image"></span>
+        <span style="background-image:url(https://i.loli.net/2019/11/20/ufK74WhaeQ2EjmL.jpg)" alt="linux下给非root用户设置sudo权限" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://djack.top/2018/03/27/spring-boot-mybatis&amp;h2(Ⅲ)/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://djack.top/2019/11/20/Linux-chmod-sudo/">0</span>
     
 </span>
 
@@ -194,18 +194,80 @@
             <div class="category">
             <a class="article-category-link" href="/categories/devops/">devops</a>
             </div>
-            <div class="date"><time datetime="2018-03-27T07:09:18.000Z" itemprop="datePublished">2018-03-27</time></div>
+            <div class="date"><time datetime="2019-11-20T10:52:14.000Z" itemprop="datePublished">2019-11-20</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/03/27/spring-boot-mybatis&h2(Ⅲ)/">Spring boot mybatis&amp;H2(Ⅲ)</a>
+        <a href="/2019/11/20/Linux-chmod-sudo/">linux下给非root用户设置sudo权限</a>
         </h1>
     
 
         <p class="article-excerpt">
-            本篇记录最近公司开发的新CRM系统，架构采用spring boot gradle mysql，测试数据库用H2，但是发现H2对mysql的函数支持的不是很好，所以单元测试有一定局限性。详细代码 我是链接
-build.gradle省略了Springboot 项目的通用配置12345678&apos;mysql:mysql-connector-java&apos;,&apos;org.mybatis.
+            linux系统（Centos7.x）下给非root用户增加sudo权限。
+
+首先创建新用户 
+useradd lily, passwd passwrod
+
+
+安装sudo
+yum install sudo //这个安装包很小，不到1M
+
+
+设置12345678[root@xx ~]$ su root[root@xx ~]$ vi /etc/sudoers定位到这一行：  root	ALL=(ALL
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2019/11/20/Linux-ssh-free-secret/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://i.loli.net/2019/11/20/ufK74WhaeQ2EjmL.jpg)" alt="linux ssh free secret" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://djack.top/2019/11/20/Linux-ssh-free-secret/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/devops/">devops</a>
+            </div>
+            <div class="date"><time datetime="2019-11-20T10:52:14.000Z" itemprop="datePublished">2019-11-20</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2019/11/20/Linux-ssh-free-secret/">linux ssh free secret</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            工程师在工作中都会遇到远程登陆linux的场景，本篇简单介绍免密ssh 的常用配置
+
+
+本地设置
+1234 $ cd ~/.ssh/ $ ls-rw-------@  1 djack  staff  1675 Jun 14  2018 id_rsa-rw-r--r--@  1 djack  staff   403 Jun 14  2018 id_rsa.pub
+
+
+如果没有id_rsa.pub 文
         </p>
     </div>
 </article>
