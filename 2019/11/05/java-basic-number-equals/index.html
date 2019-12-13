@@ -3,26 +3,26 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     
-    <title>Spring boot rabbitmq(Ⅳ) | Djack&#39;s Blog</title>
+    <title>java基础-数值类型比较 | Djack&#39;s Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="spring boot,集成测试,rabbitmq">
+        <meta name="keywords" content="java">
     
-    <meta name="description" content="本篇简单介绍 Spring boot rabbitmq 开发，以及简单的集成测试，详细代码 Djack@github.com  gradle  123compile(&amp;apos;org.springframework.boot:spring-boot-starter-amqp&amp;apos;)testCompile(&amp;apos;org.apache.qpid:qpid-broker:6.1.2&amp;apo">
-<meta name="keywords" content="spring boot,集成测试,rabbitmq">
+    <meta name="description" content="如果第一眼就能想到答案，恭喜你，可以不用往下看了😂  Objects.equals(Long.valueOf(1), 1)  = ？Objects.equals(Long.valueOf(1), 1L)  = ？Objects.equals(Integer.valueOf(1), 1) = ？Objects.equals(Integer.valueOf(1), Long.valueOf(1))">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring boot rabbitmq(Ⅳ)">
-<meta property="og:url" content="http://djack.top/2018/12/11/spring-boot-rabbitmq(Ⅳ)/index.html">
+<meta property="og:title" content="java基础-数值类型比较">
+<meta property="og:url" content="http://djack.top/2019/11/05/java-basic-number-equals/index.html">
 <meta property="og:site_name" content="Djack&#39;s Blog">
-<meta property="og:description" content="本篇简单介绍 Spring boot rabbitmq 开发，以及简单的集成测试，详细代码 Djack@github.com  gradle  123compile(&amp;apos;org.springframework.boot:spring-boot-starter-amqp&amp;apos;)testCompile(&amp;apos;org.apache.qpid:qpid-broker:6.1.2&amp;apo">
+<meta property="og:description" content="如果第一眼就能想到答案，恭喜你，可以不用往下看了😂  Objects.equals(Long.valueOf(1), 1)  = ？Objects.equals(Long.valueOf(1), 1L)  = ？Objects.equals(Integer.valueOf(1), 1) = ？Objects.equals(Integer.valueOf(1), Long.valueOf(1))">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2018/12/11/5c0f8f5136c02.png">
-<meta property="og:updated_time" content="2018-12-12T10:11:08.174Z">
+<meta property="og:image" content="https://i.loli.net/2019/12/13/8f9AoCUmc6Ldp3l.jpg">
+<meta property="og:updated_time" content="2019-12-13T10:33:45.134Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring boot rabbitmq(Ⅳ)">
-<meta name="twitter:description" content="本篇简单介绍 Spring boot rabbitmq 开发，以及简单的集成测试，详细代码 Djack@github.com  gradle  123compile(&amp;apos;org.springframework.boot:spring-boot-starter-amqp&amp;apos;)testCompile(&amp;apos;org.apache.qpid:qpid-broker:6.1.2&amp;apo">
-<meta name="twitter:image" content="https://i.loli.net/2018/12/11/5c0f8f5136c02.png">
+<meta name="twitter:title" content="java基础-数值类型比较">
+<meta name="twitter:description" content="如果第一眼就能想到答案，恭喜你，可以不用往下看了😂  Objects.equals(Long.valueOf(1), 1)  = ？Objects.equals(Long.valueOf(1), 1L)  = ？Objects.equals(Integer.valueOf(1), 1) = ？Objects.equals(Integer.valueOf(1), Long.valueOf(1))">
+<meta name="twitter:image" content="https://i.loli.net/2019/12/13/8f9AoCUmc6Ldp3l.jpg">
     
 
     
@@ -158,14 +158,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-spring-boot-rabbitmq(Ⅳ)" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-java-basic-number-equals" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Spring boot rabbitmq(Ⅳ)
+        java基础-数值类型比较
         </h1>
     
 
@@ -175,15 +175,15 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/12/11/spring-boot-rabbitmq(Ⅳ)/" class="article-date">
-            <time datetime="2018-12-11T07:09:18.000Z" itemprop="datePublished">2018-12-11</time>
+        <a href="/2019/11/05/java-basic-number-equals/" class="article-date">
+            <time datetime="2019-11-05T10:52:14.000Z" itemprop="datePublished">2019-11-05</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/rabbitmq/">rabbitmq</a>, <a class="tag-link" href="/tags/spring-boot/">spring boot</a>, <a class="tag-link" href="/tags/集成测试/">集成测试</a>
+        <a class="tag-link" href="/tags/java/">java</a>
     </div>
 
                 <span id="busuanzi_container_page_pv">本文被浏览 <span id="busuanzi_value_page_pv"></span> 次</span>
@@ -192,24 +192,49 @@
         
         <div class="article-entry" itemprop="articleBody">
             
-            <p>本篇简单介绍 <code>Spring boot</code> <code>rabbitmq</code> 开发，以及简单的集成测试，详细代码 <a href="https://github.com/Djacke/spring-boot-mmr-starter" target="_blank" rel="noopener">Djack@github.com</a></p>
+            <p>如果第一眼就能想到答案，恭喜你，可以不用往下看了😂</p>
+<blockquote>
+<p>Objects.equals(Long.valueOf(1), 1)  = ？<br>Objects.equals(Long.valueOf(1), 1L)  = ？<br>Objects.equals(Integer.valueOf(1), 1) = ？<br>Objects.equals(Integer.valueOf(1), Long.valueOf(1)) = ？</p>
+</blockquote>
+<p>首先看看<code>Objects.equals</code> 的源码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static boolean equals(Object a, Object b) &#123;</span><br><span class="line">        return (a == b) || (a != null &amp;&amp; a.equals(b));</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>再看看<code>Long.valueOf</code> 的源码,加载时初始化了cache数组-128 ～ 127，Integer类同理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public static Long valueOf(long l) &#123;</span><br><span class="line">        final int offset = 128;</span><br><span class="line">        if (l &gt;= -128 &amp;&amp; l &lt;= 127) &#123; // will cache</span><br><span class="line">            return LongCache.cache[(int)l + offset];</span><br><span class="line">        &#125;</span><br><span class="line">        return new Long(l);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li><p>gradle </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">compile(&apos;org.springframework.boot:spring-boot-starter-amqp&apos;)</span><br><span class="line"></span><br><span class="line">testCompile(&apos;org.apache.qpid:qpid-broker:6.1.2&apos;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>config</p>
-<ul>
-<li style="list-style: none"><input type="checkbox" checked> 测试目录下模拟启动amqp</li>
-<li style="list-style: none"><input type="checkbox" checked> 申明mq的exchange 和 queue</li>
-</ul>
-</li>
-<li><p>rabbit mq listener</p>
-<p>监听队列，接收消息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@RabbitListener(queues = AmqpConfig.RECEIPT_VOUCHER_QUEUE)</span><br><span class="line">public void receive(String message) throws IOException &#123;</span><br><span class="line">  System.out.println(&quot;接受消息内容:&quot; + message);</span><br><span class="line">  messageDatas.add(objectMapper.readValue(message, ContactPerson.class));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>integration test<br>发送消息到测试队列，并检查消费是否成功</p>
+<li>LongCache.cache的初始化<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">LongCache</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="title">LongCache</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">static</span> <span class="keyword">final</span> Long cache[] = <span class="keyword">new</span> Long[-(-<span class="number">128</span>) + <span class="number">127</span> + <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">static</span> &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cache.length; i++)</span><br><span class="line">                cache[i] = <span class="keyword">new</span> Long(i - <span class="number">128</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<p>接下来看看Long和Integer的equals方法</p>
+<ul>
+<li><p>Long</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public boolean equals(Object obj) &#123;</span><br><span class="line">       if (obj instanceof Long) &#123;</span><br><span class="line">           return value == ((Long)obj).longValue();</span><br><span class="line">       &#125;</span><br><span class="line">       return false;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Integer</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> public boolean equals(Object obj) &#123;</span><br><span class="line">        if (obj instanceof Integer) &#123;</span><br><span class="line">            return value == ((Integer)obj).intValue();</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>两个类的equals方法几乎一样，但都调用了.xxxValue() 方法，此方法返回对象的非包装类型的常量值。其实我有点疑惑equals方法的入参的类型为什么不是当前类型，因为<code>obj instanceof Integer</code>这个判断就已经过滤了其他类型，所以感觉没必要入参类型为<code>Object</code>的</p>
+</blockquote>
+<p>综上所述</p>
+<blockquote>
+<p>Objects.equals(Integer.valueOf(1), Long.valueOf(1)) = false 无疑</p>
+</blockquote>
+<p>我们再来看看java的自动装箱，1 作为实参传递给形如<code>xxxMethod(Object obj)</code>的方法时就会经过自动装箱，将基本类型<code>int</code>转换为<code>Integer</code>,<code>1L</code> 就会转为<code>Long</code>。<br>再回到文章开头的表达式，不难得出结果</p>
+<blockquote>
+<p>false<br>true<br>true<br>false</p>
+</blockquote>
+<p>我们不妨再看个例子</p>
+<blockquote>
+<p>Long a = 10L;<br>Long b = 10L;<br>System.out.println(a == b);<br>Long c = 129L;<br>Long d = 129L;<br>System.out.println(c == d);</p>
+</blockquote>
+<p>一定有人会产生困惑，解决办法只有一个，首先编译你的.java文件，然后<code>javap -verbose ${youClassName}</code>,查看字节码，会发现如下的字节码片段</p>
+<blockquote>
+<p>invokestatic    #14; //Method java/lang/Long.valueOf:(J)Ljava/lang/Long;  </p>
+</blockquote>
+<p>所以<code>10L</code> 或者 <code>129L</code> 都会经过<code>Long.valueOf</code>创建Long的实例，问题就会又回到第一个例子的问题了，很容易得到如下结果</p>
+<blockquote>
+<p>true  //因为10L处于缓存区间之内，比较的是同一个对象的地址<br>false //129L超出缓存区间，初始化会创建连个对象，地址相异</p>
+</blockquote>
+<p>纯属个人整理的点滴知识，欢迎批评指正。</p>
 
         </div>
         <footer class="article-footer">
@@ -217,7 +242,7 @@
 
 
 
-    <a data-url="http://djack.top/2018/12/11/spring-boot-rabbitmq(Ⅳ)/" data-id="ck440pn6d00155f5xahio5sqy" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://djack.top/2019/11/05/java-basic-number-equals/" data-id="ck440pn5z000e5f5xgc0meclj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -328,20 +353,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/12/11/spring-boot-mongodb(Ⅰ)/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2019/11/05/blog-links/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            Spring boot mongodb(Ⅰ)
+            推荐博客链接
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2018/12/11/spring-boot-spotbus(Ⅱ)/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/10/22/spring-boot-devtools(VI)/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Spring boot spotbus(Ⅱ)</p>
+        <p class="article-nav-title">Spring boot devtools(VⅠ)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -552,7 +577,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://djack.top/2018/12/11/spring-boot-rabbitmq(Ⅳ)/';
+    var disqus_url = 'http://djack.top/2019/11/05/java-basic-number-equals/';
     
     (function() {
     var dsq = document.createElement('script');
